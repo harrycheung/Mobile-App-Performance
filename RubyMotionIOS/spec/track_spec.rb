@@ -79,7 +79,7 @@ describe 'Track tests' do
   it 'should fail to load track' do
     track_json = '{
       "track": {
-        "name": "Isabella Raceway",
+        "name": "Test Raceway",
         "gates": [
          {
            "gate_type": "SPLIT",
