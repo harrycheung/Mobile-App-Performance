@@ -4,7 +4,7 @@ describe 'Session tests' do
     track_json = '{
       "track": {
         "id": 1000,
-        "name": "Isabella Raceway",
+        "name": "Test Raceway",
         "gates": [
           {
             "gate_type": "SPLIT",
