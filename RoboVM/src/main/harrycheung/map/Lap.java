@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Lap {
-  
+
   protected Track    track;
   protected double   startTime;
   protected int      lapNumber;
@@ -30,11 +30,11 @@ public final class Lap {
     this.splits = new double[track.numSplits()];
     this.outLap = lapNumber == 0;
   }
-  
+
   public void add(Point point) {
     duration = point.lapTime;
     distance = point.lapDistance;
     points.add(point);
   }
-  
+
 }

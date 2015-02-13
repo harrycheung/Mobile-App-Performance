@@ -5,18 +5,18 @@
 package harrycheung.map;
 
 public final class Gate extends Point {
-    
+
   private static final int LINE_WIDTH    = 80;
   private static final int BEARING_RANGE = 90;
-  
+
   protected GateType type;
   protected int splitNumber;
   private Point leftPoint, rightPoint;
-  
+
   public Gate(GateType type, int splitNumber,
-              double latitude, double longitude, double bearing) {
+      double latitude, double longitude, double bearing) {
     super(latitude, longitude, bearing);
-    
+
     this.type = type;
     this.splitNumber = splitNumber;
     double leftBearing  = bearing - 90 < 0 ? bearing + 270 : bearing - 90;
@@ -24,7 +24,7 @@ public final class Gate extends Point {
     this.leftPoint  = destination(leftBearing, LINE_WIDTH / 2);
     this.rightPoint = destination(rightBearing, LINE_WIDTH / 2);
   }
-  
+
   public Point crossed(Point start, Point destination) {
     double pathBearing = start.bearingTo(destination);
     Point cross = null;

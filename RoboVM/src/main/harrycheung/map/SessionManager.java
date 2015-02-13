@@ -7,7 +7,7 @@ package harrycheung.map;
 import java.util.*;
 
 public class SessionManager {
-  
+
   protected Session session;
   protected Lap currentLap;
   protected Lap bestLap;
@@ -20,12 +20,12 @@ public class SessionManager {
   private Point lastPoint;
   private int lapNumber;
   private double splitStartTime;
-  
+
   // Singleton
   protected static SessionManager instance = new SessionManager();
   public static SessionManager getInstance() { return instance; }
   private SessionManager() { }
-  
+
   public void startSession(Track track) {
     if (session == null) {
       this.track = track;
@@ -40,52 +40,52 @@ public class SessionManager {
       splitGaps = new double[track.numSplits()];
     }
   }
-  
+
   public void endSession() {
     if (session != null) {
       session = null;
     }
   }
-  
+
   public void gps(double latitude, double longitude, double speed,
-                  double bearing, double horizontalAccuracy,
-                  double verticalAccuracy, double timestamp) {
+      double bearing, double horizontalAccuracy,
+      double verticalAccuracy, double timestamp) {
     Point point = new Point(latitude, longitude, speed, bearing,
-                            horizontalAccuracy, verticalAccuracy, timestamp);
+        horizontalAccuracy, verticalAccuracy, timestamp);
     if (lastPoint != null) {
       Point cross = nextGate.crossed(lastPoint, point);
       if (cross != null) {
         currentLap.add(cross);
         currentLap.splits[currentSplit] = cross.splitTime;
         switch (nextGate.type) {
-          case START_FINISH:
-          case FINISH:
-            if (currentLap.points.get(0).generated) {
-              currentLap.valid = true;
-              if (bestLap == null || currentLap.duration < bestLap.duration) {
-                bestLap = currentLap;
-              }
+        case START_FINISH:
+        case FINISH:
+          if (currentLap.points.get(0).generated) {
+            currentLap.valid = true;
+            if (bestLap == null || currentLap.duration < bestLap.duration) {
+              bestLap = currentLap;
             }
-          case START:
-          	lapNumber++;
-            currentLap = new Lap(session, track, cross.timestamp, lapNumber);
-            lastPoint = new Point(cross.getLatitudeDegrees(), cross.getLongitudeDegrees(), cross.speed, cross.bearing,
-                                  cross.hAccuracy, cross.vAccuracy, cross.timestamp);
-            lastPoint.lapDistance = 0;
-            lastPoint.lapTime = 0;
-            lastPoint.generated = true;
-            currentLap.add(lastPoint);
-            session.laps.add(currentLap);
-            gap = 0;
-            Arrays.fill(splitGaps, 0);
-            bestIndex = 0;
-            currentSplit = 0;
-            break;
-          case SPLIT:
-            if (bestLap != null) {
-              splitGaps[currentSplit] = currentLap.splits[currentSplit] - bestLap.splits[currentSplit];
-            }
-            currentSplit++;
+          }
+        case START:
+          lapNumber++;
+          currentLap = new Lap(session, track, cross.timestamp, lapNumber);
+          lastPoint = new Point(cross.getLatitudeDegrees(), cross.getLongitudeDegrees(), cross.speed, cross.bearing,
+              cross.hAccuracy, cross.vAccuracy, cross.timestamp);
+          lastPoint.lapDistance = 0;
+          lastPoint.lapTime = 0;
+          lastPoint.generated = true;
+          currentLap.add(lastPoint);
+          session.laps.add(currentLap);
+          gap = 0;
+          Arrays.fill(splitGaps, 0);
+          bestIndex = 0;
+          currentSplit = 0;
+          break;
+        case SPLIT:
+          if (bestLap != null) {
+            splitGaps[currentSplit] = currentLap.splits[currentSplit] - bestLap.splits[currentSplit];
+          }
+          currentSplit++;
         }
         if (bestLap != null && bestIndex < bestLap.points.size() - 1) {
           while (bestIndex < bestLap.points.size() - 1) {
@@ -112,5 +112,5 @@ public class SessionManager {
     currentLap.add(point);
     lastPoint = point;
   }
-  
+
 }

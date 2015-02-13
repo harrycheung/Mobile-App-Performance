@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Track {
-  
+
   public String name;
-  
+
   protected Gate[] gates;
   protected int id;
   protected Gate start;
-  
+
   private Track(JSONObject json) throws Exception {
     JSONObject jsonTrack = json.getJSONObject("track");
     JSONArray jsonGates = jsonTrack.getJSONArray("gates");
@@ -24,10 +24,10 @@ public final class Track {
     for (int i = 0; i < jsonGates.length(); i++) {
       JSONObject jsonGate = jsonGates.getJSONObject(i);
       Gate gate = new Gate(GateType.valueOf(jsonGate.getString("gate_type")),
-                           jsonGate.getInt("split_number"),
-                           jsonGate.getDouble("latitude"),
-                           jsonGate.getDouble("longitude"),
-                           jsonGate.getDouble("bearing"));
+          jsonGate.getInt("split_number"),
+          jsonGate.getDouble("latitude"),
+          jsonGate.getDouble("longitude"),
+          jsonGate.getDouble("bearing"));
       if (gate.type == GateType.START_FINISH ||
           gate.type == GateType.START) {
         start = gate;
@@ -38,12 +38,12 @@ public final class Track {
     name = jsonTrack.getString("name");
     gates = new Gate[gateList.size()];
     gateList.toArray(gates);
-    
+
     assert(id != 0);
     assert(name != null);
     assert(start != null);
   }
-  
+
   public static Track[] load(String json) {
     try {
       if (json.startsWith("[")) {
@@ -61,11 +61,11 @@ public final class Track {
       return null;
     }
   }
-  
+
   public int numSplits() {
     return gates.length;
   }
-  
+
   public double distanceToStart(double latitude, double longitude) {
     return start.distanceTo(new Point(latitude, longitude));
   }
