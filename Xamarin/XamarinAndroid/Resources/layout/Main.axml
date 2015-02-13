@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/button1000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49.0dp"
+        android:id="@+id/label1000"
+        android:gravity="center" />
+    <Button
+        android:text="Run 10000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button10000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="63.6dp"
+        android:id="@+id/label10000"
+        android:layout_marginBottom="39.0dp"
+        android:gravity="center" />
+</LinearLayout>
