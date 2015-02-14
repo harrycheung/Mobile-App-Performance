@@ -73,28 +73,32 @@ class MainActivity < UIViewController
 
   def click_1000
     start = Time.now
+    start_time = Time.now.to_f
     1000.times do |n|
-      start_time = Time.now.to_f
-      SessionManager.start_session(@track)
-      @points.each { |point|
-        SessionManager.gps(point.latitude_degrees, point.longitude_degrees, point.speed, point.bearing, 5, 15, start_time)
-        start_time += 1
+      autorelease_pool {
+        SessionManager.start_session(@track)
+        @points.each { |point|
+          SessionManager.gps(point.latitude_degrees, point.longitude_degrees, point.speed, point.bearing, 5, 15, start_time)
+          start_time += 1
+        }
+        SessionManager.end_session
       }
-      SessionManager.end_session
     end
     @label_1000.text = (Time.now - start).format(3)
   end
 
   def click_10000
     start = Time.now
-    1000.times do |n|
-      start_time = Time.now.to_f
-      SessionManager.start_session(@track)
-      @points.each { |point|
-        SessionManager.gps(point.latitude_degrees, point.longitude_degrees, point.speed, point.bearing, 5, 15, start_time)
-        start_time += 1
+    start_time = Time.now.to_f
+    10000.times do |n|
+      autorelease_pool {
+        SessionManager.start_session(@track)
+        @points.each { |point|
+          SessionManager.gps(point.latitude_degrees, point.longitude_degrees, point.speed, point.bearing, 5, 15, start_time)
+          start_time += 1
+        }
+        SessionManager.end_session
       }
-      SessionManager.end_session
     end
     @label_10000.text = (Time.now - start).format(3)
   end
