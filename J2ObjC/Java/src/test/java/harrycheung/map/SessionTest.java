@@ -62,7 +62,7 @@ public final class SessionTest {
 
   @Test
   public void singleLapSession() throws Exception {
-    FileReader fileReader =	new FileReader(getClass().getResource("/single_lap_session.csv").getFile());
+    FileReader fileReader =	new FileReader("./Assets/single_lap_session.csv");
     BufferedReader bufferedReader = new BufferedReader(fileReader);
     String line;
     SessionManager.getInstance().startSession(track);
@@ -98,7 +98,7 @@ public final class SessionTest {
 
   @Test
   public void multiLapSession() throws Exception {
-    FileReader fileReader =	new FileReader(getClass().getResource("/multi_lap_session.csv").getFile());
+    FileReader fileReader =	new FileReader("./Assets/multi_lap_session.csv");
     BufferedReader bufferedReader = new BufferedReader(fileReader);
     String line;
     SessionManager.getInstance().startSession(track);
