@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A9874441A91525C007B8FB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874431A91525C007B8FB8 /* main.m */; };
+		4A9874471A91525C007B8FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874461A91525C007B8FB8 /* AppDelegate.m */; };
+		4A98744A1A91525C007B8FB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874491A91525C007B8FB8 /* ViewController.m */; };
+		4A98744D1A91525C007B8FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A98744B1A91525C007B8FB8 /* Main.storyboard */; };
+		4A98744F1A91525C007B8FB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A98744E1A91525C007B8FB8 /* Images.xcassets */; };
+		4A9874521A91525C007B8FB8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9874501A91525C007B8FB8 /* LaunchScreen.xib */; };
+		4A98745E1A91525C007B8FB8 /* J2ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A98745D1A91525C007B8FB8 /* J2ObjCTests.m */; };
+		4A98747C1A9160A2007B8FB8 /* Point.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A98746D1A9160A2007B8FB8 /* Point.m */; };
+		4A98747D1A9160A2007B8FB8 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A98746F1A9160A2007B8FB8 /* Session.m */; };
+		4A98747E1A9160A2007B8FB8 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874711A9160A2007B8FB8 /* SessionManager.m */; };
+		4A98747F1A9160A2007B8FB8 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874731A9160A2007B8FB8 /* Track.m */; };
+		4A9874801A9160A2007B8FB8 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874751A9160A2007B8FB8 /* Gate.m */; };
+		4A9874811A9160A2007B8FB8 /* GateType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874771A9160A2007B8FB8 /* GateType.m */; };
+		4A9874821A9160A2007B8FB8 /* Lap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874791A9160A2007B8FB8 /* Lap.m */; };
+		4A9874831A9160A2007B8FB8 /* Physics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A98747B1A9160A2007B8FB8 /* Physics.m */; };
+		4A9874851A91631A007B8FB8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9874841A91631A007B8FB8 /* libz.dylib */; };
+		4A9874871A91631E007B8FB8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9874861A91631E007B8FB8 /* Security.framework */; };
+		4A9874891A916325007B8FB8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9874881A916325007B8FB8 /* libicucore.dylib */; };
+		4A98748D1A9163E0007B8FB8 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A98748C1A9163E0007B8FB8 /* Assets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A9874581A91525C007B8FB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A9874361A91525C007B8FB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A98743D1A91525C007B8FB8;
+			remoteInfo = J2ObjC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A98743E1A91525C007B8FB8 /* J2ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J2ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A9874421A91525C007B8FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A9874431A91525C007B8FB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A9874451A91525C007B8FB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A9874461A91525C007B8FB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A9874481A91525C007B8FB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4A9874491A91525C007B8FB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A98744C1A91525C007B8FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A98744E1A91525C007B8FB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A9874511A91525C007B8FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4A9874571A91525C007B8FB8 /* J2ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = J2ObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A98745C1A91525C007B8FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A98745D1A91525C007B8FB8 /* J2ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = J2ObjCTests.m; sourceTree = "<group>"; };
+		4A98746C1A9160A2007B8FB8 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Point.h; path = j2objc_generated/Point.h; sourceTree = SOURCE_ROOT; };
+		4A98746D1A9160A2007B8FB8 /* Point.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Point.m; path = j2objc_generated/Point.m; sourceTree = SOURCE_ROOT; };
+		4A98746E1A9160A2007B8FB8 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = j2objc_generated/Session.h; sourceTree = SOURCE_ROOT; };
+		4A98746F1A9160A2007B8FB8 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = j2objc_generated/Session.m; sourceTree = SOURCE_ROOT; };
+		4A9874701A9160A2007B8FB8 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionManager.h; path = j2objc_generated/SessionManager.h; sourceTree = SOURCE_ROOT; };
+		4A9874711A9160A2007B8FB8 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionManager.m; path = j2objc_generated/SessionManager.m; sourceTree = SOURCE_ROOT; };
+		4A9874721A9160A2007B8FB8 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Track.h; path = j2objc_generated/Track.h; sourceTree = SOURCE_ROOT; };
+		4A9874731A9160A2007B8FB8 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Track.m; path = j2objc_generated/Track.m; sourceTree = SOURCE_ROOT; };
+		4A9874741A9160A2007B8FB8 /* Gate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gate.h; path = j2objc_generated/Gate.h; sourceTree = SOURCE_ROOT; };
+		4A9874751A9160A2007B8FB8 /* Gate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gate.m; path = j2objc_generated/Gate.m; sourceTree = SOURCE_ROOT; };
+		4A9874761A9160A2007B8FB8 /* GateType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GateType.h; path = j2objc_generated/GateType.h; sourceTree = SOURCE_ROOT; };
+		4A9874771A9160A2007B8FB8 /* GateType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GateType.m; path = j2objc_generated/GateType.m; sourceTree = SOURCE_ROOT; };
+		4A9874781A9160A2007B8FB8 /* Lap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lap.h; path = j2objc_generated/Lap.h; sourceTree = SOURCE_ROOT; };
+		4A9874791A9160A2007B8FB8 /* Lap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lap.m; path = j2objc_generated/Lap.m; sourceTree = SOURCE_ROOT; };
+		4A98747A1A9160A2007B8FB8 /* Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Physics.h; path = j2objc_generated/Physics.h; sourceTree = SOURCE_ROOT; };
+		4A98747B1A9160A2007B8FB8 /* Physics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Physics.m; path = j2objc_generated/Physics.m; sourceTree = SOURCE_ROOT; };
+		4A9874841A91631A007B8FB8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4A9874861A91631E007B8FB8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A9874881A916325007B8FB8 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4A98748C1A9163E0007B8FB8 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A98743B1A91525C007B8FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A9874891A916325007B8FB8 /* libicucore.dylib in Frameworks */,
+				4A9874871A91631E007B8FB8 /* Security.framework in Frameworks */,
+				4A9874851A91631A007B8FB8 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A9874541A91525C007B8FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A9874351A91525C007B8FB8 = {
+			isa = PBXGroup;
+			children = (
+				4A98748C1A9163E0007B8FB8 /* Assets */,
+				4A9874881A916325007B8FB8 /* libicucore.dylib */,
+				4A9874861A91631E007B8FB8 /* Security.framework */,
+				4A9874841A91631A007B8FB8 /* libz.dylib */,
+				4A9874401A91525C007B8FB8 /* J2ObjC */,
+				4A98745A1A91525C007B8FB8 /* J2ObjCTests */,
+				4A98743F1A91525C007B8FB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A98743F1A91525C007B8FB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A98743E1A91525C007B8FB8 /* J2ObjC.app */,
+				4A9874571A91525C007B8FB8 /* J2ObjCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A9874401A91525C007B8FB8 /* J2ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				4A98746C1A9160A2007B8FB8 /* Point.h */,
+				4A98746D1A9160A2007B8FB8 /* Point.m */,
+				4A98746E1A9160A2007B8FB8 /* Session.h */,
+				4A98746F1A9160A2007B8FB8 /* Session.m */,
+				4A9874701A9160A2007B8FB8 /* SessionManager.h */,
+				4A9874711A9160A2007B8FB8 /* SessionManager.m */,
+				4A9874721A9160A2007B8FB8 /* Track.h */,
+				4A9874731A9160A2007B8FB8 /* Track.m */,
+				4A9874741A9160A2007B8FB8 /* Gate.h */,
+				4A9874751A9160A2007B8FB8 /* Gate.m */,
+				4A9874761A9160A2007B8FB8 /* GateType.h */,
+				4A9874771A9160A2007B8FB8 /* GateType.m */,
+				4A9874781A9160A2007B8FB8 /* Lap.h */,
+				4A9874791A9160A2007B8FB8 /* Lap.m */,
+				4A98747A1A9160A2007B8FB8 /* Physics.h */,
+				4A98747B1A9160A2007B8FB8 /* Physics.m */,
+				4A9874451A91525C007B8FB8 /* AppDelegate.h */,
+				4A9874461A91525C007B8FB8 /* AppDelegate.m */,
+				4A9874481A91525C007B8FB8 /* ViewController.h */,
+				4A9874491A91525C007B8FB8 /* ViewController.m */,
+				4A98744B1A91525C007B8FB8 /* Main.storyboard */,
+				4A98744E1A91525C007B8FB8 /* Images.xcassets */,
+				4A9874501A91525C007B8FB8 /* LaunchScreen.xib */,
+				4A9874411A91525C007B8FB8 /* Supporting Files */,
+			);
+			path = J2ObjC;
+			sourceTree = "<group>";
+		};
+		4A9874411A91525C007B8FB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A9874421A91525C007B8FB8 /* Info.plist */,
+				4A9874431A91525C007B8FB8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A98745A1A91525C007B8FB8 /* J2ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A98745D1A91525C007B8FB8 /* J2ObjCTests.m */,
+				4A98745B1A91525C007B8FB8 /* Supporting Files */,
+			);
+			path = J2ObjCTests;
+			sourceTree = "<group>";
+		};
+		4A98745B1A91525C007B8FB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A98745C1A91525C007B8FB8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A98743D1A91525C007B8FB8 /* J2ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A9874611A91525C007B8FB8 /* Build configuration list for PBXNativeTarget "J2ObjC" */;
+			buildPhases = (
+				4A98743A1A91525C007B8FB8 /* Sources */,
+				4A98743B1A91525C007B8FB8 /* Frameworks */,
+				4A98743C1A91525C007B8FB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = J2ObjC;
+			productName = J2ObjC;
+			productReference = 4A98743E1A91525C007B8FB8 /* J2ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A9874561A91525C007B8FB8 /* J2ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A9874641A91525C007B8FB8 /* Build configuration list for PBXNativeTarget "J2ObjCTests" */;
+			buildPhases = (
+				4A9874531A91525C007B8FB8 /* Sources */,
+				4A9874541A91525C007B8FB8 /* Frameworks */,
+				4A9874551A91525C007B8FB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A9874591A91525C007B8FB8 /* PBXTargetDependency */,
+			);
+			name = J2ObjCTests;
+			productName = J2ObjCTests;
+			productReference = 4A9874571A91525C007B8FB8 /* J2ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A9874361A91525C007B8FB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = harrycheung;
+				TargetAttributes = {
+					4A98743D1A91525C007B8FB8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					4A9874561A91525C007B8FB8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4A98743D1A91525C007B8FB8;
+					};
+				};
+			};
+			buildConfigurationList = 4A9874391A91525C007B8FB8 /* Build configuration list for PBXProject "J2ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A9874351A91525C007B8FB8;
+			productRefGroup = 4A98743F1A91525C007B8FB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A98743D1A91525C007B8FB8 /* J2ObjC */,
+				4A9874561A91525C007B8FB8 /* J2ObjCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A98743C1A91525C007B8FB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A98744D1A91525C007B8FB8 /* Main.storyboard in Resources */,
+				4A98748D1A9163E0007B8FB8 /* Assets in Resources */,
+				4A9874521A91525C007B8FB8 /* LaunchScreen.xib in Resources */,
+				4A98744F1A91525C007B8FB8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A9874551A91525C007B8FB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A98743A1A91525C007B8FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A98747F1A9160A2007B8FB8 /* Track.m in Sources */,
+				4A98747E1A9160A2007B8FB8 /* SessionManager.m in Sources */,
+				4A9874811A9160A2007B8FB8 /* GateType.m in Sources */,
+				4A9874821A9160A2007B8FB8 /* Lap.m in Sources */,
+				4A9874831A9160A2007B8FB8 /* Physics.m in Sources */,
+				4A9874801A9160A2007B8FB8 /* Gate.m in Sources */,
+				4A98747C1A9160A2007B8FB8 /* Point.m in Sources */,
+				4A98747D1A9160A2007B8FB8 /* Session.m in Sources */,
+				4A98744A1A91525C007B8FB8 /* ViewController.m in Sources */,
+				4A9874471A91525C007B8FB8 /* AppDelegate.m in Sources */,
+				4A9874441A91525C007B8FB8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A9874531A91525C007B8FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A98745E1A91525C007B8FB8 /* J2ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A9874591A91525C007B8FB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A98743D1A91525C007B8FB8 /* J2ObjC */;
+			targetProxy = 4A9874581A91525C007B8FB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A98744B1A91525C007B8FB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A98744C1A91525C007B8FB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A9874501A91525C007B8FB8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A9874511A91525C007B8FB8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A98745F1A91525C007B8FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4A9874601A91525C007B8FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A9874621A91525C007B8FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					j2objc_generated,
+					"$(J2OBJC_HOME)/include",
+				);
+				INFOPLIST_FILE = J2ObjC/Info.plist;
+				J2OBJC_HOME = "/Users/harry/Projects/src/j2objc-0.9.6.1";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(J2OBJC_HOME)/lib";
+				OTHER_LDFLAGS = (
+					"-ljsr305",
+					"-ljre_emul",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4A9874631A91525C007B8FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					j2objc_generated,
+					"$(J2OBJC_HOME)/include",
+				);
+				INFOPLIST_FILE = J2ObjC/Info.plist;
+				J2OBJC_HOME = "/Users/harry/Projects/src/j2objc-0.9.6.1";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(J2OBJC_HOME)/lib";
+				OTHER_LDFLAGS = (
+					"-ljsr305",
+					"-ljre_emul",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4A9874651A91525C007B8FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = J2ObjCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/J2ObjC.app/J2ObjC";
+			};
+			name = Debug;
+		};
+		4A9874661A91525C007B8FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = J2ObjCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/J2ObjC.app/J2ObjC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A9874391A91525C007B8FB8 /* Build configuration list for PBXProject "J2ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A98745F1A91525C007B8FB8 /* Debug */,
+				4A9874601A91525C007B8FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A9874611A91525C007B8FB8 /* Build configuration list for PBXNativeTarget "J2ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A9874621A91525C007B8FB8 /* Debug */,
+				4A9874631A91525C007B8FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4A9874641A91525C007B8FB8 /* Build configuration list for PBXNativeTarget "J2ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A9874651A91525C007B8FB8 /* Debug */,
+				4A9874661A91525C007B8FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A9874361A91525C007B8FB8 /* Project object */;
+}
