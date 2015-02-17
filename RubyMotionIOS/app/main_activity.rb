@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 class MainActivity < UIViewController
 
   def viewDidLoad

@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 class Gate < Point
 
   START_FINISH = 'START_FINISH'

@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 class Lap
 
   attr_reader :track, :start_time, :lap_number, :points, :duration, :distance

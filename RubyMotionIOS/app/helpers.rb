@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 module JSON
 
   def self.parse(json_string)

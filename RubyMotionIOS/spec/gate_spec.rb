@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 describe 'Gate tests' do
 
   it 'tests gate crossing' do

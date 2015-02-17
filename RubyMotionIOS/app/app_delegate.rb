@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 class AppDelegate
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)

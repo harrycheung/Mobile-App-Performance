@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 describe 'Track tests' do
 
   it 'load single track from json' do

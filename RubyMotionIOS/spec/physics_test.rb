@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 describe 'Physics tests' do
 
   it 'computes distances' do

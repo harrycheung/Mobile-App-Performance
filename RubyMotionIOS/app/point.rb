@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 module Math
   def self.to_radians(value)
     value * PI / 180

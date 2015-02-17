@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 class Track
 
   attr_reader :id, :name, :gates, :start

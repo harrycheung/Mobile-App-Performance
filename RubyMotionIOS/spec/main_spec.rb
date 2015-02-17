@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 describe "Application 'RubyMotionIOS'" do
   before do
     @app = UIApplication.sharedApplication

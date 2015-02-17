@@ -1,3 +1,7 @@
+#
+# Copyright (c) 2015 Harry Cheung
+#
+
 describe 'Point tests' do
 
   it 'should subtract' do
