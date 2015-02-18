@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<Button onClick="run1000" top="40">Run 1000</Button>
+		<Label id="label1000" top="80"></Label>
+		<Button onClick="run10000" top="120">Run 10000</Button>
+		<Label id="label10000" top="160"></Label>
+	</Window>
+</Alloy>
