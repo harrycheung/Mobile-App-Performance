@@ -63,19 +63,9 @@ public final class PointTest {
     Point b = new Point(15, 15);
     Point c = new Point(5, 15);
     Point d = new Point(15, 5);
+    Point i = Point.intersectSimple(a, b, c, d);
 
-    Point i = Point.intersectVector(a, b, c, d);
-
-    assertThat(i.getLatitudeDegrees(), is(10.11503));
+    assertThat(i.getLatitudeDegrees(), is(10.0));
     assertThat(i.getLongitudeDegrees(), is(10.0));
-
-    Point p1 = new Point(51.8853, 0.2545);
-    double brng1  = 108.55;
-    Point p2 = new Point(49.0034, 2.5735);
-    double brng2  = 32.44;
-
-    i = Point.intersectVector(p1, brng1, p2, brng2);
-
-    assertThat(i, equalTo(new Point(50.907608, 4.508575)));
   }
 }
