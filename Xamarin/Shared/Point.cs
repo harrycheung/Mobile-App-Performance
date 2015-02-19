@@ -132,68 +132,6 @@ namespace Xamarin.Shared
 
 			return null;
 		}
-
-		private class Vector {
-			public double x, y, z;
-
-			public Vector(double x, double y, double z) {
-				this.x = x;
-				this.y = y;
-				this.z = z;
-			}
-
-			public Vector Cross(Vector v) {
-				double x = this.y * v.z - this.z * v.y;
-				double y = this.z * v.x - this.x * v.z;
-				double z = this.x * v.y - this.y * v.x;
-
-				return new Vector(x, y, z);
-			}
-
-			public Point ToPoint() {
-				double φ = Math.Atan2(this.z, Math.Sqrt(this.x * this.x + this.y * this.y));
-				double λ = Math.Atan2(this.y, this.x);
-
-				return new Point(φ, λ, true);
-			}
-		}
-
-		private Vector ToVector() {
-			// right-handed vector: x -> 0°E,0°N; y -> 90°E,0°N, z -> 90°N
-			double x = Math.Cos(this.latitude) * Math.Cos(this.longitude);
-			double y = Math.Cos(this.latitude) * Math.Sin(this.longitude);
-			double z = Math.Sin(this.latitude);
-
-			return new Vector(x, y, z);
-		}
-
-		private Vector GreatCircle(double bearing) {
-			double φ = this.latitude;
-			double λ = this.longitude;
-			double θ = ConvertToRadians(bearing);
-
-			double x =  Math.Sin(λ) * Math.Cos(θ) - Math.Sin(φ) * Math.Cos(λ) * Math.Sin(θ);
-			double y = -Math.Cos(λ) * Math.Cos(θ) - Math.Sin(φ) * Math.Sin(λ) * Math.Sin(θ);
-			double z =  Math.Cos(φ) * Math.Sin(θ);
-
-			return new Vector(x, y, z);
-		}
-
-		public static Point intersectVector(Point p1Start, Object p1End, Point p2Start, Object p2End) {
-			Vector c1, c2;
-			if (p1End is Point) {
-				c1 = p1Start.ToVector().Cross(((Point)p1End).ToVector());
-			} else {
-				c1 = p1Start.GreatCircle((Double)p1End);
-			}
-			if (p2End is Point) {
-				c2 = p2Start.ToVector().Cross(((Point)p2End).ToVector());
-			} else {
-				c2 = p2Start.GreatCircle((Double)p2End);
-			}
-
-			return c1.Cross(c2).ToPoint();
-		}
 	}
 }
 

@@ -57,15 +57,9 @@
   HCMPoint *b = [[[HCMPoint alloc] initWithDouble:15 withDouble:15] autorelease];
   HCMPoint *c = [[[HCMPoint alloc] initWithDouble:5 withDouble:15] autorelease];
   HCMPoint *d = [[[HCMPoint alloc] initWithDouble:15 withDouble:5] autorelease];
-  HCMPoint *i = HCMPoint_intersectVectorWithHCMPoint_withId_withHCMPoint_withId_(a, b, c, d);
-  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangDouble_valueOfWithDouble_([((HCMPoint *) nil_chk(i)) getLatitudeDegrees]), OrgHamcrestCoreMatchers_isWithId_(JavaLangDouble_valueOfWithDouble_(10.11503)));
+  HCMPoint *i = HCMPoint_intersectSimpleWithHCMPoint_withHCMPoint_withHCMPoint_withHCMPoint_(a, b, c, d);
+  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangDouble_valueOfWithDouble_([((HCMPoint *) nil_chk(i)) getLatitudeDegrees]), OrgHamcrestCoreMatchers_isWithId_(JavaLangDouble_valueOfWithDouble_(10.0)));
   OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangDouble_valueOfWithDouble_([i getLongitudeDegrees]), OrgHamcrestCoreMatchers_isWithId_(JavaLangDouble_valueOfWithDouble_(10.0)));
-  HCMPoint *p1 = [[[HCMPoint alloc] initWithDouble:51.8853 withDouble:0.2545] autorelease];
-  jdouble brng1 = 108.55;
-  HCMPoint *p2 = [[[HCMPoint alloc] initWithDouble:49.0034 withDouble:2.5735] autorelease];
-  jdouble brng2 = 32.44;
-  i = HCMPoint_intersectVectorWithHCMPoint_withId_withHCMPoint_withId_(p1, JavaLangDouble_valueOfWithDouble_(brng1), p2, JavaLangDouble_valueOfWithDouble_(brng2));
-  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(i, OrgHamcrestCoreMatchers_equalToWithId_([[[HCMPoint alloc] initWithDouble:50.907608 withDouble:4.508575] autorelease]));
 }
 
 - (instancetype)init {

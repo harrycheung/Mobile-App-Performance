@@ -6,8 +6,6 @@
 #ifndef _HCMPoint_H_
 #define _HCMPoint_H_
 
-@class HCMPoint_Vector;
-
 #include "J2ObjC_header.h"
 
 #define HCMPoint_RADIUS 6371000.0
@@ -78,11 +76,6 @@
                              withHCMPoint:(HCMPoint *)q
                              withHCMPoint:(HCMPoint *)q2;
 
-+ (HCMPoint *)intersectVectorWithHCMPoint:(HCMPoint *)p1Start
-                                   withId:(id)p1End
-                             withHCMPoint:(HCMPoint *)p2Start
-                                   withId:(id)p2End;
-
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(HCMPoint)
@@ -91,36 +84,11 @@ CF_EXTERN_C_BEGIN
 
 FOUNDATION_EXPORT HCMPoint *HCMPoint_intersectSimpleWithHCMPoint_withHCMPoint_withHCMPoint_withHCMPoint_(HCMPoint *p, HCMPoint *p2, HCMPoint *q, HCMPoint *q2);
 
-FOUNDATION_EXPORT HCMPoint *HCMPoint_intersectVectorWithHCMPoint_withId_withHCMPoint_withId_(HCMPoint *p1Start, id p1End, HCMPoint *p2Start, id p2End);
-
 J2OBJC_STATIC_FIELD_GETTER(HCMPoint, RADIUS, jdouble)
 CF_EXTERN_C_END
 
 typedef HCMPoint HarrycheungMapPoint;
 
 J2OBJC_TYPE_LITERAL_HEADER(HCMPoint)
-
-@interface HCMPoint_Vector : NSObject {
- @public
-  jdouble x_, y_, z_;
-}
-
-- (instancetype)initWithHCMPoint:(HCMPoint *)outer$
-                      withDouble:(jdouble)x
-                      withDouble:(jdouble)y
-                      withDouble:(jdouble)z;
-
-- (HCMPoint_Vector *)crossWithHCMPoint_Vector:(HCMPoint_Vector *)v;
-
-- (HCMPoint *)toPoint;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(HCMPoint_Vector)
-
-CF_EXTERN_C_BEGIN
-CF_EXTERN_C_END
-
-J2OBJC_TYPE_LITERAL_HEADER(HCMPoint_Vector)
 
 #endif // _HCMPoint_H_

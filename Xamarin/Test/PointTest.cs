@@ -54,20 +54,10 @@ namespace Xamarin.Test
 			Point c = new Point(5, 15);
 			Point d = new Point(15, 5);
 
-			Point i = Point.intersectVector(a, b, c, d);
+			Point i = Point.IntersectSimple(a, b, c, d);
 
-			Assert.AreEqual(10.11503, i.LatitudeDegrees());
+			Assert.AreEqual(10.0, i.LatitudeDegrees());
 			Assert.AreEqual(10.0, i.LongitudeDegrees());
-
-			Point p1 = new Point(51.8853, 0.2545);
-			double brng1  = 108.55;
-			Point p2 = new Point(49.0034, 2.5735);
-			double brng2  = 32.44;
-
-			i = Point.intersectVector(p1, brng1, p2, brng2);
-
-			Assert.AreEqual(50.907608, i.LatitudeDegrees());
-			Assert.AreEqual(4.508575, i.LongitudeDegrees());
 		}
 	}
 }

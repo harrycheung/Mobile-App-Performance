@@ -5,30 +5,15 @@
 
 #include "J2ObjC_source.h"
 #include "Point.h"
-#include "java/lang/Double.h"
 #include "java/lang/Math.h"
 
 __attribute__((unused)) static jdouble HCMPoint_roundValueWithDouble_(HCMPoint *self, jdouble value);
-__attribute__((unused)) static HCMPoint_Vector *HCMPoint_toVector(HCMPoint *self);
-__attribute__((unused)) static HCMPoint_Vector *HCMPoint_greatCircleWithDouble_(HCMPoint *self, jdouble bearing);
 
 @interface HCMPoint () {
 }
 
 - (jdouble)roundValueWithDouble:(jdouble)value;
-
-- (HCMPoint_Vector *)toVector;
-
-- (HCMPoint_Vector *)greatCircleWithDouble:(jdouble)bearing;
 @end
-
-@interface HCMPoint_Vector () {
- @public
-  HCMPoint *this$0_;
-}
-@end
-
-J2OBJC_FIELD_SETTER(HCMPoint_Vector, this$0_, HCMPoint *)
 
 @implementation HCMPoint
 
@@ -166,21 +151,6 @@ J2OBJC_FIELD_SETTER(HCMPoint_Vector, this$0_, HCMPoint *)
   return HCMPoint_intersectSimpleWithHCMPoint_withHCMPoint_withHCMPoint_withHCMPoint_(p, p2, q, q2);
 }
 
-- (HCMPoint_Vector *)toVector {
-  return HCMPoint_toVector(self);
-}
-
-- (HCMPoint_Vector *)greatCircleWithDouble:(jdouble)bearing {
-  return HCMPoint_greatCircleWithDouble_(self, bearing);
-}
-
-+ (HCMPoint *)intersectVectorWithHCMPoint:(HCMPoint *)p1Start
-                                   withId:(id)p1End
-                             withHCMPoint:(HCMPoint *)p2Start
-                                   withId:(id)p2End {
-  return HCMPoint_intersectVectorWithHCMPoint_withId_withHCMPoint_withId_(p1Start, p1End, p2Start, p2End);
-}
-
 - (void)copyAllFieldsTo:(HCMPoint *)other {
   [super copyAllFieldsTo:other];
   other->latitude_ = latitude_;
@@ -215,9 +185,6 @@ J2OBJC_FIELD_SETTER(HCMPoint_Vector, this$0_, HCMPoint *)
     { "destinationWithDouble:withDouble:", "destination", "Lharrycheung.map.Point;", 0x1, NULL },
     { "distanceToWithHCMPoint:", "distanceTo", "D", 0x1, NULL },
     { "intersectSimpleWithHCMPoint:withHCMPoint:withHCMPoint:withHCMPoint:", "intersectSimple", "Lharrycheung.map.Point;", 0x9, NULL },
-    { "toVector", NULL, "Lharrycheung.map.Point$Vector;", 0x2, NULL },
-    { "greatCircleWithDouble:", "greatCircle", "Lharrycheung.map.Point$Vector;", 0x2, NULL },
-    { "intersectVectorWithHCMPoint:withId:withHCMPoint:withId:", "intersectVector", "Lharrycheung.map.Point;", 0x9, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
     { "RADIUS_", NULL, 0x1a, "D", NULL, .constantValue.asDouble = HCMPoint_RADIUS },
@@ -234,7 +201,7 @@ J2OBJC_FIELD_SETTER(HCMPoint_Vector, this$0_, HCMPoint *)
     { "splitTime_", NULL, 0x1, "D", NULL,  },
     { "generated_", NULL, 0x1, "Z", NULL,  },
   };
-  static const J2ObjcClassInfo _HCMPoint = { 1, "Point", "harrycheung.map", NULL, 0x1, 19, methods, 13, fields, 0, NULL};
+  static const J2ObjcClassInfo _HCMPoint = { 1, "Point", "harrycheung.map", NULL, 0x1, 16, methods, 13, fields, 0, NULL};
   return &_HCMPoint;
 }
 
@@ -262,100 +229,4 @@ HCMPoint *HCMPoint_intersectSimpleWithHCMPoint_withHCMPoint_withHCMPoint_withHCM
   return nil;
 }
 
-HCMPoint_Vector *HCMPoint_toVector(HCMPoint *self) {
-  jdouble x = JavaLangMath_cosWithDouble_(self->latitude_) * JavaLangMath_cosWithDouble_(self->longitude_);
-  jdouble y = JavaLangMath_cosWithDouble_(self->latitude_) * JavaLangMath_sinWithDouble_(self->longitude_);
-  jdouble z = JavaLangMath_sinWithDouble_(self->latitude_);
-  return [[[HCMPoint_Vector alloc] initWithHCMPoint:self withDouble:x withDouble:y withDouble:z] autorelease];
-}
-
-HCMPoint_Vector *HCMPoint_greatCircleWithDouble_(HCMPoint *self, jdouble bearing) {
-  jdouble φ = self->latitude_;
-  jdouble λ = self->longitude_;
-  jdouble θ = JavaLangMath_toRadiansWithDouble_(bearing);
-  jdouble x = JavaLangMath_sinWithDouble_(λ) * JavaLangMath_cosWithDouble_(θ) - JavaLangMath_sinWithDouble_(φ) * JavaLangMath_cosWithDouble_(λ) * JavaLangMath_sinWithDouble_(θ);
-  jdouble y = -JavaLangMath_cosWithDouble_(λ) * JavaLangMath_cosWithDouble_(θ) - JavaLangMath_sinWithDouble_(φ) * JavaLangMath_sinWithDouble_(λ) * JavaLangMath_sinWithDouble_(θ);
-  jdouble z = JavaLangMath_cosWithDouble_(φ) * JavaLangMath_sinWithDouble_(θ);
-  return [[[HCMPoint_Vector alloc] initWithHCMPoint:self withDouble:x withDouble:y withDouble:z] autorelease];
-}
-
-HCMPoint *HCMPoint_intersectVectorWithHCMPoint_withId_withHCMPoint_withId_(HCMPoint *p1Start, id p1End, HCMPoint *p2Start, id p2End) {
-  HCMPoint_init();
-  HCMPoint_Vector *c1, *c2;
-  if ([p1End isKindOfClass:[HCMPoint class]]) {
-    c1 = [((HCMPoint_Vector *) nil_chk(HCMPoint_toVector(nil_chk(p1Start)))) crossWithHCMPoint_Vector:HCMPoint_toVector(nil_chk(((HCMPoint *) check_class_cast(p1End, [HCMPoint class]))))];
-  }
-  else {
-    c1 = HCMPoint_greatCircleWithDouble_(nil_chk(p1Start), [((JavaLangDouble *) nil_chk((JavaLangDouble *) check_class_cast(p1End, [JavaLangDouble class]))) doubleValue]);
-  }
-  if ([p2End isKindOfClass:[HCMPoint class]]) {
-    c2 = [((HCMPoint_Vector *) nil_chk(HCMPoint_toVector(nil_chk(p2Start)))) crossWithHCMPoint_Vector:HCMPoint_toVector(nil_chk(((HCMPoint *) check_class_cast(p2End, [HCMPoint class]))))];
-  }
-  else {
-    c2 = HCMPoint_greatCircleWithDouble_(nil_chk(p2Start), [((JavaLangDouble *) nil_chk((JavaLangDouble *) check_class_cast(p2End, [JavaLangDouble class]))) doubleValue]);
-  }
-  return [((HCMPoint_Vector *) nil_chk([((HCMPoint_Vector *) nil_chk(c1)) crossWithHCMPoint_Vector:c2])) toPoint];
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(HCMPoint)
-
-@implementation HCMPoint_Vector
-
-- (instancetype)initWithHCMPoint:(HCMPoint *)outer$
-                      withDouble:(jdouble)x
-                      withDouble:(jdouble)y
-                      withDouble:(jdouble)z {
-  HCMPoint_Vector_set_this$0_(self, outer$);
-  if (self = [super init]) {
-    self->x_ = x;
-    self->y_ = y;
-    self->z_ = z;
-  }
-  return self;
-}
-
-- (HCMPoint_Vector *)crossWithHCMPoint_Vector:(HCMPoint_Vector *)v {
-  jdouble x = self->y_ * ((HCMPoint_Vector *) nil_chk(v))->z_ - self->z_ * v->y_;
-  jdouble y = self->z_ * v->x_ - self->x_ * v->z_;
-  jdouble z = self->x_ * v->y_ - self->y_ * v->x_;
-  return [[[HCMPoint_Vector alloc] initWithHCMPoint:this$0_ withDouble:x withDouble:y withDouble:z] autorelease];
-}
-
-- (HCMPoint *)toPoint {
-  jdouble φ = JavaLangMath_atan2WithDouble_withDouble_(self->z_, JavaLangMath_sqrtWithDouble_(self->x_ * self->x_ + self->y_ * self->y_));
-  jdouble λ = JavaLangMath_atan2WithDouble_withDouble_(self->y_, self->x_);
-  return [[[HCMPoint alloc] initWithDouble:φ withDouble:λ withBoolean:YES] autorelease];
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  [super dealloc];
-}
-
-- (void)copyAllFieldsTo:(HCMPoint_Vector *)other {
-  [super copyAllFieldsTo:other];
-  HCMPoint_Vector_set_this$0_(other, this$0_);
-  other->x_ = x_;
-  other->y_ = y_;
-  other->z_ = z_;
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "initWithHCMPoint:withDouble:withDouble:withDouble:", "Vector", NULL, 0x1, NULL },
-    { "crossWithHCMPoint_Vector:", "cross", "Lharrycheung.map.Point$Vector;", 0x1, NULL },
-    { "toPoint", NULL, "Lharrycheung.map.Point;", 0x1, NULL },
-  };
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", NULL, 0x1012, "Lharrycheung.map.Point;", NULL,  },
-    { "x_", NULL, 0x1, "D", NULL,  },
-    { "y_", NULL, 0x1, "D", NULL,  },
-    { "z_", NULL, 0x1, "D", NULL,  },
-  };
-  static const J2ObjcClassInfo _HCMPoint_Vector = { 1, "Vector", "harrycheung.map", "Point", 0x2, 3, methods, 4, fields, 0, NULL};
-  return &_HCMPoint_Vector;
-}
-
-@end
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(HCMPoint_Vector)
