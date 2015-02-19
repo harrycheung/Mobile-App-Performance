@@ -8,7 +8,7 @@ import UIKit
 // Singleton
 private let _SessionManagerSharedInstance = SessionManager()
 
-class SessionManager {
+final class SessionManager {
   
   var session: Session? = nil
   var currentLap: Lap?

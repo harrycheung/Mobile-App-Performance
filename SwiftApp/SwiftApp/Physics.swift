@@ -4,7 +4,7 @@
 
 import Foundation
 
-class Physics {
+final class Physics {
   
   // x = vt + 1/2att
   class func distance(#velocity: Double, acceleration: Double, time: Double) -> Double {

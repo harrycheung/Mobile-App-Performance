@@ -17,7 +17,7 @@ enum GateType: String, Printable {
   }
 }
 
-class Gate: Point {
+final class Gate: Point {
   
   let LINE_WIDTH:    Double = 30
   let BEARING_RANGE: Double = 5
@@ -44,10 +44,10 @@ class Gate: Point {
       pathBearing < (bearing + BEARING_RANGE) {
       cross = Point.intersectSimple(p: leftPoint!, p2: rightPoint!, q: start, q2: destination)
       if cross != nil {
-        let distance      = start.distanceTo(cross!)
-        let timeSince     = destination.timestamp - start.timestamp
-        let acceleration  = (destination.speed - start.speed) / timeSince
-        let timeCross     = Physics.time(distance: distance, velocity: start.speed, acceleration: acceleration)
+        let distance     = start.distanceTo(cross!)
+        let timeSince    = destination.timestamp - start.timestamp
+        let acceleration = (destination.speed - start.speed) / timeSince
+        let timeCross    = Physics.time(distance: distance, velocity: start.speed, acceleration: acceleration)
         cross!.generated   = true
         cross!.speed       = start.speed + acceleration * timeCross
         cross!.bearing     = start.bearingTo(destination)

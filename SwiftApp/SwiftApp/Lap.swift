@@ -4,7 +4,7 @@
 
 import UIKit
 
-class Lap: NSObject {
+final class Lap: NSObject {
   
   let GATE_RANGE: Double = 100
   

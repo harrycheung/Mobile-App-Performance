@@ -4,7 +4,7 @@
 
 import UIKit
 
-class Track: NSObject {
+final class Track: NSObject {
   
   var gates: [Gate] = []
   let id: Int!

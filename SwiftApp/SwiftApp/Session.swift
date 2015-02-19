@@ -4,7 +4,7 @@
 
 import UIKit
 
-class Session: NSObject {
+final class Session: NSObject {
   
   weak var track:     Track?
   let startTime: Double
