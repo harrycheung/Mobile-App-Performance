@@ -3,7 +3,7 @@
 //
 
 var Physics = Physics || {};
-  
+
 // x = vt + 1/2att
 Physics.distance = function(velocity, acceleration, time) {
   return velocity * time + (acceleration * time * time) / 2.0;
@@ -11,9 +11,13 @@ Physics.distance = function(velocity, acceleration, time) {
 
 // t = (-v + sqrt(2vvax)) / a (quadratic)
 Physics.time = function(distance, velocity, acceleration) {
-  if (acceleration == 0) {
+  if (acceleration === 0) {
     return distance / velocity;
   } else {
     return (-velocity + Math.sqrt(velocity * velocity + 2.0 * acceleration * distance)) / acceleration;
   }
 };
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = Physics;
+}

@@ -31,7 +31,7 @@ function Point(latitude, longitude, inRadians,
   this.speed = typeof speed !== 'undefined' ? speed : 0.0;
   this.bearing = typeof bearing !== 'undefined' ? bearing : 0.0;
   this.hAccuracy = typeof horizontalAccuracy !== 'undefined' ? horizontalAccuracy : 0.0;
-  this.vAccuracy = typeof verticalAccuracy !== 'undefined' ? verticalAccuracy : 0.0;;
+  this.vAccuracy = typeof verticalAccuracy !== 'undefined' ? verticalAccuracy : 0.0;
   this.timestamp = typeof timestamp !== 'undefined' ? timestamp : 0.0;
   this.lapDistance = 0.0;
   this.lapTime = 0.0;
@@ -109,7 +109,7 @@ Point.intersectSimple = function (p, p2, q, q2) {
   var s2_y = q2.latitude - q.latitude;
 
   var den = (-s2_x * s1_y + s1_x * s2_y);
-  if (den == 0) { return null; }
+  if (den === 0) { return null; }
 
   var s = (-s1_y * (p.longitude - q.longitude) + s1_x * (p.latitude - q.latitude)) / den;
   var t = ( s2_x * (p.latitude - q.latitude) - s2_y * (p.longitude - q.longitude)) / den;
@@ -120,3 +120,7 @@ Point.intersectSimple = function (p, p2, q, q2) {
 
   return null;
 };
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = Point;
+}

@@ -2,6 +2,12 @@
 // Copyright (c) 2015 Harry Cheung
 //
 
+if (typeof require !== 'undefined') {
+  var Point = require('point');
+  var Lap = require('lap');
+  var Session = require('session');
+}
+
 function SessionManager() { }
 
 SessionManager.instance_ = null;
@@ -111,3 +117,7 @@ SessionManager.prototype.gps = function(latitude, longitude, speed, bearing,
   this.currentLap.add(point);
   this.lastPoint = point;
 };
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = SessionManager;
+}

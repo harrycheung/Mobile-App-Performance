@@ -2,6 +2,10 @@
 //  Copyright (c) 2015 Harry Cheung
 //
 
+if (typeof require !== 'undefined') {
+  var Gate = require('gate');
+}
+
 function Track(json) {
   this.start = null;
   this.gates = [];
@@ -27,3 +31,7 @@ function Track(json) {
 Track.prototype.numSplits = function() {
   return this.gates.length;
 };
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = Track;
+}
