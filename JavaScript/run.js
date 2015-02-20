@@ -1,3 +1,10 @@
+if (typeof require !== 'undefined') {
+  var Point = require('point');
+  var Track = require('track');
+  var SessionManager = require('session_manager');
+  var multi_data = require('data/multi');
+}
+
 var trackJSON = ""
 + "{"
 +   "\"track\": {"
@@ -28,7 +35,6 @@ var trackJSON = ""
 +     "]"
 +   "}"
 + "}";
-
 var track = new Track(JSON.parse(trackJSON));
 
 var points = [];
@@ -40,20 +46,12 @@ for (var i = 0; i < length; i++) {
   points.push(new Point(
     parseFloat(parts[0]),
     parseFloat(parts[1]),
-	false,
+  false,
     parseFloat(parts[2]),
     parseFloat(parts[3]),
     5.0,
     15.0,
     0));
-}
-
-function run1000() {
-  document.getElementById("label1000").innerHTML = "" + run(1000);
-}
-
-function run10000() {
-  document.getElementById("label10000").innerHTML = "" + run(10000);
 }
 
 function run(count) {
@@ -63,11 +61,15 @@ function run(count) {
     SessionManager.instance().startSession(track);
     var pointsLength = points.length;
     for (var i = 0; i < pointsLength; i++) {
-	  var point = points[i];
+    var point = points[i];
       SessionManager.instance().gps(point.latitudeDegrees(), point.longitudeDegrees(), 
         point.speed, point.bearing, point.hAccuracy, point.vAccuracy, timestamp++);
     }
     SessionManager.instance().endSession();
   }
   return (new Date()).getTime() / 1000.0 - start;
+}
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = run;
 }

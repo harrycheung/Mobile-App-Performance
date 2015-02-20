@@ -2,6 +2,11 @@
 // Copyright (c) 2015 Harry Cheung
 //
 
+if (typeof require !== 'undefined') {
+  var Physics = require('physics');
+  var Point = require('point');
+}
+
 GateType = {
   START : "START",
   FINISH : "FINISH",
@@ -28,7 +33,7 @@ Gate.prototype.crossed = function(start, destination) {
   var cross = null;
   if (pathBearing > (this.bearing - BEARING_RANGE) && pathBearing < (this.bearing + BEARING_RANGE)) {
     cross = Point.intersectSimple(this.leftPoint, this.rightPoint, start, destination);
-    if (cross != null) {
+    if (cross !== null) {
       var distance      = start.distanceTo(cross);
       var timeSince     = destination.timestamp - start.timestamp;
       var acceleration  = (destination.speed - start.speed) / timeSince;
@@ -44,3 +49,7 @@ Gate.prototype.crossed = function(start, destination) {
   }
   return cross;
 };
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = Gate;
+}

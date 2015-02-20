@@ -9,3 +9,7 @@ function Session(track, startTime) {
   this.laps = [];
   this.bestLap = null;
 }
+
+if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+  exports = module.exports = Session;
+}

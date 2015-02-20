@@ -1,16 +1,10 @@
-".container": {
-	backgroundColor:"white"
+"Window": {
+	backgroundColor: 'white',
+  layout: 'vertical'
 }
 
-"Label": {
-	width: Ti.UI.SIZE,
+".elm": {
+	top: 30,
 	height: 40,
-	color: "#000"
+	color: '#000'
 }
-
-"Button": {
-	width: Ti.UI.SIZE,
-	height: 40,
-	color: "#000"
-}
-
