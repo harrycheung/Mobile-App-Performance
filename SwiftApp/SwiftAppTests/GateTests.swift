@@ -15,7 +15,7 @@ class GateTests: XCTestCase {
       horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: 1)
     let b = Point(latitude: 37.452523, longitude: -122.207107,
       speed: 14.239999771118164, bearing: 32.09501647949219,
-      horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: 3)
+      horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: 2)
     b.lapDistance = 100.0
     b.lapTime = 0.1
     let c = Point(latitude: 37.45263, longitude: -122.207023,
