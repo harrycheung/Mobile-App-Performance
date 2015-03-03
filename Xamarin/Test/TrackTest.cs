@@ -17,7 +17,7 @@ namespace Xamarin.Test
 				+ "{"
 				+   "\"track\": {"
 				+     "\"id\": \"1000\","
-				+     "\"name\": \"Isabella Raceway\","
+				+     "\"name\": \"Test Raceway\","
 				+     "\"gates\": ["
 				+       "{"
 				+       "\"gate_type\": \"SPLIT\","
@@ -48,7 +48,7 @@ namespace Xamarin.Test
 
 			Assert.NotNull(track);
 			Assert.AreEqual(1000, track.id);
-			Assert.AreEqual("Isabella Raceway", track.name);
+			Assert.AreEqual("Test Raceway", track.name);
 			Assert.AreEqual(3, track.NumSplits());
 		}
 
@@ -58,7 +58,7 @@ namespace Xamarin.Test
 				+ "[{"
 				+   "\"track\": {"
 				+     "\"id\": \"1000\","
-				+     "\"name\": \"Isabella Raceway\","
+				+     "\"name\": \"Test Raceway\","
 				+     "\"gates\": ["
 				+       "{"
 				+       "\"gate_type\": \"SPLIT\","
@@ -89,7 +89,7 @@ namespace Xamarin.Test
 
 			Assert.NotNull(track);
 			Assert.AreEqual(1000, track.id);
-			Assert.AreEqual("Isabella Raceway", track.name);
+			Assert.AreEqual("Test Raceway", track.name);
 			Assert.AreEqual(3, track.NumSplits());
 		}
 
@@ -98,7 +98,7 @@ namespace Xamarin.Test
 			String trackJSON = ""
 				+ "{"
 				+   "\"track\": {"
-				+     "\"name\": \"Isabella Raceway\","
+				+     "\"name\": \"Test Raceway\","
 				+     "\"gates\": ["
 				+       "{"
 				+       "\"gate_type\": \"SPLIT\","

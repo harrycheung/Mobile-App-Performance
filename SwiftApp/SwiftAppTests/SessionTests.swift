@@ -15,7 +15,7 @@ class SessionTests: XCTestCase {
         + "{"
         +   "\"track\": {"
         +     "\"id\": \"1000\","
-        +     "\"name\": \"Isabella Raceway\","
+        +     "\"name\": \"Test Raceway\","
         +     "\"gates\": ["
         +       "{"
         +       "\"type\": \"SPLIT\","

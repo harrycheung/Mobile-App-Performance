@@ -17,25 +17,25 @@
 @implementation HCMTrackTest
 
 - (void)trackLoadFromJSON {
-  NSString *trackJSON = @"{\"track\": {\"id\": \"1000\",\"name\": \"Isabella Raceway\",\"gates\": [{\"gate_type\": \"SPLIT\",\"latitude\": \"37.451775\",\"longitude\": \"-122.203657\",\"bearing\": \"136\",\"split_number\": \"1\"},{\"gate_type\": \"SPLIT\",\"latitude\": \"37.450127\",\"longitude\": \"-122.205499\",\"bearing\": \"326\",\"split_number\": \"2\"},{\"gate_type\": \"START_FINISH\",\"latitude\": \"37.452602\",\"longitude\": \"-122.207069\",\"bearing\": \"32\",\"split_number\": \"3\"}]}}";
+  NSString *trackJSON = @"{\"track\": {\"id\": \"1000\",\"name\": \"Test Raceway\",\"gates\": [{\"gate_type\": \"SPLIT\",\"latitude\": \"37.451775\",\"longitude\": \"-122.203657\",\"bearing\": \"136\",\"split_number\": \"1\"},{\"gate_type\": \"SPLIT\",\"latitude\": \"37.450127\",\"longitude\": \"-122.205499\",\"bearing\": \"326\",\"split_number\": \"2\"},{\"gate_type\": \"START_FINISH\",\"latitude\": \"37.452602\",\"longitude\": \"-122.207069\",\"bearing\": \"32\",\"split_number\": \"3\"}]}}";
   HCMTrack *track = IOSObjectArray_Get(nil_chk(HCMTrack_load__WithNSString_(trackJSON)), 0);
   OrgJunitAssert_assertNotNullWithId_(track);
   OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangInteger_valueOfWithInt_(((HCMTrack *) nil_chk(track))->id__), OrgHamcrestCoreMatchers_isWithId_(JavaLangInteger_valueOfWithInt_(1000)));
-  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(track->name_, OrgHamcrestCoreMatchers_isWithId_(@"Isabella Raceway"));
+  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(track->name_, OrgHamcrestCoreMatchers_isWithId_(@"Test Raceway"));
   OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangInteger_valueOfWithInt_([track numSplits]), OrgHamcrestCoreMatchers_isWithId_(JavaLangInteger_valueOfWithInt_(3)));
 }
 
 - (void)trackLoadFromJSONArray {
-  NSString *trackJSON = @"[{\"track\": {\"id\": \"1000\",\"name\": \"Isabella Raceway\",\"gates\": [{\"gate_type\": \"SPLIT\",\"latitude\": \"37.451775\",\"longitude\": \"-122.203657\",\"bearing\": \"136\",\"split_number\": \"1\"},{\"gate_type\": \"SPLIT\",\"latitude\": \"37.450127\",\"longitude\": \"-122.205499\",\"bearing\": \"326\",\"split_number\": \"2\"},{\"gate_type\": \"START_FINISH\",\"latitude\": \"37.452602\",\"longitude\": \"-122.207069\",\"bearing\": \"32\",\"split_number\": \"3\"}]}}]";
+  NSString *trackJSON = @"[{\"track\": {\"id\": \"1000\",\"name\": \"Test Raceway\",\"gates\": [{\"gate_type\": \"SPLIT\",\"latitude\": \"37.451775\",\"longitude\": \"-122.203657\",\"bearing\": \"136\",\"split_number\": \"1\"},{\"gate_type\": \"SPLIT\",\"latitude\": \"37.450127\",\"longitude\": \"-122.205499\",\"bearing\": \"326\",\"split_number\": \"2\"},{\"gate_type\": \"START_FINISH\",\"latitude\": \"37.452602\",\"longitude\": \"-122.207069\",\"bearing\": \"32\",\"split_number\": \"3\"}]}}]";
   HCMTrack *track = IOSObjectArray_Get(nil_chk(HCMTrack_load__WithNSString_(trackJSON)), 0);
   OrgJunitAssert_assertNotNullWithId_(track);
   OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangInteger_valueOfWithInt_(((HCMTrack *) nil_chk(track))->id__), OrgHamcrestCoreMatchers_isWithId_(JavaLangInteger_valueOfWithInt_(1000)));
-  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(track->name_, OrgHamcrestCoreMatchers_isWithId_(@"Isabella Raceway"));
+  OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(track->name_, OrgHamcrestCoreMatchers_isWithId_(@"Test Raceway"));
   OrgJunitAssert_assertThatWithId_withOrgHamcrestMatcher_(JavaLangInteger_valueOfWithInt_([track numSplits]), OrgHamcrestCoreMatchers_isWithId_(JavaLangInteger_valueOfWithInt_(3)));
 }
 
 - (void)trackLoadFailOnId {
-  NSString *trackJSON = @"{\"track\": {\"name\": \"Isabella Raceway\",\"gates\": [{\"gate_type\": \"SPLIT\",\"latitude\": \"37.451775\",\"longitude\": \"-122.203657\",\"bearing\": \"136\",\"split_number\": \"1\"},{\"gate_type\": \"SPLIT\",\"latitude\": \"37.450127\",\"longitude\": \"-122.205499\",\"bearing\": \"326\",\"split_number\": \"2\"},{\"gate_type\": \"START_FINISH\",\"latitude\": \"37.452602\",\"longitude\": \"-122.207069\",\"bearing\": \"32\",\"split_number\": \"3\"}]}}";
+  NSString *trackJSON = @"{\"track\": {\"name\": \"Test Raceway\",\"gates\": [{\"gate_type\": \"SPLIT\",\"latitude\": \"37.451775\",\"longitude\": \"-122.203657\",\"bearing\": \"136\",\"split_number\": \"1\"},{\"gate_type\": \"SPLIT\",\"latitude\": \"37.450127\",\"longitude\": \"-122.205499\",\"bearing\": \"326\",\"split_number\": \"2\"},{\"gate_type\": \"START_FINISH\",\"latitude\": \"37.452602\",\"longitude\": \"-122.207069\",\"bearing\": \"32\",\"split_number\": \"3\"}]}}";
   OrgJunitAssert_assertNullWithId_(HCMTrack_load__WithNSString_(trackJSON));
 }
 

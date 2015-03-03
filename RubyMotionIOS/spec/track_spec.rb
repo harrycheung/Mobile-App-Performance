@@ -38,7 +38,7 @@ describe 'Track tests' do
     track = Track.new(JSON.parse(track_json))
 
     track.id.should.equal 1000
-    track.name.should.equal 'Isabella Raceway'
+    track.name.should.equal 'Test Raceway'
     track.gates.length.should.equal 3
   end
 
@@ -46,7 +46,7 @@ describe 'Track tests' do
     track_json = '[{
       "track": {
         "id": 1000,
-        "name": "Isabella Raceway",
+        "name": "Test Raceway",
         "gates": [
          {
            "gate_type": "SPLIT",
@@ -76,7 +76,7 @@ describe 'Track tests' do
     track = Track.new(JSON.parse(track_json)[0])
 
     track.id.should.equal 1000
-    track.name.should.equal 'Isabella Raceway'
+    track.name.should.equal 'Test Raceway'
     track.gates.length.should.equal 3
   end
 

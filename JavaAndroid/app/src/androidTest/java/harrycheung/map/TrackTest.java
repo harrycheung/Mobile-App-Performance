@@ -17,7 +17,7 @@ public final class TrackTest {
         + "{"
         +   "\"track\": {"
         +     "\"id\": \"1000\","
-        +     "\"name\": \"Isabella Raceway\","
+        +     "\"name\": \"Test Raceway\","
         +     "\"gates\": ["
         +       "{"
         +       "\"gate_type\": \"SPLIT\","
@@ -48,7 +48,7 @@ public final class TrackTest {
 
     assertNotNull(track);
     assertThat(track.id, is(1000));
-    assertThat(track.name, is("Isabella Raceway"));
+    assertThat(track.name, is("Test Raceway"));
     assertThat(track.numSplits(), is(3));
   }
 
@@ -58,7 +58,7 @@ public final class TrackTest {
         + "[{"
         +   "\"track\": {"
         +     "\"id\": \"1000\","
-        +     "\"name\": \"Isabella Raceway\","
+        +     "\"name\": \"Test Raceway\","
         +     "\"gates\": ["
         +       "{"
         +       "\"gate_type\": \"SPLIT\","
@@ -89,7 +89,7 @@ public final class TrackTest {
 
     assertNotNull(track);
     assertThat(track.id, is(1000));
-    assertThat(track.name, is("Isabella Raceway"));
+    assertThat(track.name, is("Test Raceway"));
     assertThat(track.numSplits(), is(3));
   }
 
@@ -98,7 +98,7 @@ public final class TrackTest {
     String trackJSON = ""
         + "{"
         +   "\"track\": {"
-        +     "\"name\": \"Isabella Raceway\","
+        +     "\"name\": \"Test Raceway\","
         +     "\"gates\": ["
         +       "{"
         +       "\"gate_type\": \"SPLIT\","

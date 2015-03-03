@@ -23,7 +23,7 @@ class ViewController: UIViewController {
       + "{"
       +   "\"track\": {"
       +     "\"id\": \"1000\","
-      +     "\"name\": \"Isabella Raceway\","
+      +     "\"name\": \"Test Raceway\","
       +     "\"gates\": ["
       +       "{"
       +       "\"gate_type\": \"SPLIT\","

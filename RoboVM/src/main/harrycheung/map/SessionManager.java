@@ -53,6 +53,15 @@ public class SessionManager {
     Point point = new Point(latitude, longitude, speed, bearing,
         horizontalAccuracy, verticalAccuracy, timestamp);
     if (lastPoint != null) {
+      double gpsDistance = lastPoint.distanceTo(point);
+      double timeDifference = point.timestamp - lastPoint.timestamp;
+      double acceleration = (point.speed - lastPoint.speed) / timeDifference;
+      double calcDistance = Physics.distance(lastPoint.speed, acceleration, timeDifference);
+      if (calcDistance < gpsDistance) {
+        System.out.println("Distance diff: " + (gpsDistance - calcDistance));
+      } else {
+        System.out.println("No diff");
+      }
       Point cross = nextGate.crossed(lastPoint, point);
       if (cross != null) {
         currentLap.add(cross);
@@ -86,6 +95,8 @@ public class SessionManager {
             splitGaps[currentSplit] = currentLap.splits[currentSplit] - bestLap.splits[currentSplit];
           }
           currentSplit++;
+        default:
+          break;
         }
         if (bestLap != null && bestIndex < bestLap.points.size() - 1) {
           while (bestIndex < bestLap.points.size() - 1) {
