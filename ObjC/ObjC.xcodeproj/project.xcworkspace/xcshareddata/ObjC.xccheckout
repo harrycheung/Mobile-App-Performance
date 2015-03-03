@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52424A65-F2D5-4744-B6E8-84CE3CA40D31</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ObjC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EEBE6566103A8DD31D16B64D9DD5190321482B4F</key>
+		<string>https://github.com/harrycheung/Mobile-App-Performance.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ObjC/ObjC.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EEBE6566103A8DD31D16B64D9DD5190321482B4F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/harrycheung/Mobile-App-Performance.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EEBE6566103A8DD31D16B64D9DD5190321482B4F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EEBE6566103A8DD31D16B64D9DD5190321482B4F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MAP</string>
+		</dict>
+	</array>
+</dict>
+</plist>
