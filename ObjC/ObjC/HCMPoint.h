@@ -8,20 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HCMPoint : NSObject
+@interface HCMPoint : NSObject {
 
-@property double latitude;
-@property double longitude;
-@property double speed;
-@property double bearing;
-@property double hAccuracy;
-@property double vAccuracy;
-@property double timestamp;
-@property double lapDistance;
-@property double lapTime;
-@property double splitTime;
-@property double acceleration;
-@property BOOL generated;
+  @public
+  double latitude;
+  double longitude;
+  double speed;
+  double bearing;
+  double hAccuracy;
+  double vAccuracy;
+  double timestamp;
+  double lapDistance;
+  double lapTime;
+  double splitTime;
+  double acceleration;
+  BOOL generated;
+  
+}
 
 - (id)initWithLatitude:(double)latitude
              longitude:(double)longitude

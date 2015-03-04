@@ -30,13 +30,13 @@ static double BEARING_RANGE = 5.0;
            bearing:(double)bearing {
   self = [super initWithLatitude:latitude longitude:longitude inRadians:FALSE];
   if (self) {
-    self.type = type;
-    self.splitNumber = splitNumber;
+    self->type = type;
+    self->splitNumber = splitNumber;
     double leftBearing  = bearing - 90 < 0 ? bearing + 270 : bearing - 90;
     double rightBearing = bearing + 90 > 360 ? bearing - 270 : bearing + 90;
     leftPoint  = [[super destinationWithBearing:leftBearing distance:LINE_WIDTH / 2.0] retain];
     rightPoint = [[super destinationWithBearing:rightBearing distance:LINE_WIDTH / 2.0] retain];
-    super.bearing = bearing;
+    self->bearing = bearing;
   }
   return self;
 }
@@ -45,24 +45,24 @@ static double BEARING_RANGE = 5.0;
                    destination:(HCMPoint *)destination {
   double pathBearing = [start bearingToPoint:destination];
   HCMPoint *cross = nil;
-  if (pathBearing > (super.bearing - BEARING_RANGE) &&
-      pathBearing < (super.bearing + BEARING_RANGE)) {
+  if (pathBearing > (self->bearing - BEARING_RANGE) &&
+      pathBearing < (self->bearing + BEARING_RANGE)) {
     cross = [HCMPoint intersectSimpleWithPoint:leftPoint
                                      withPoint:rightPoint
                                      withPoint:start
                                      withPoint:destination];
     if (cross != nil) {
       double distance     = [start distanceToPoint:cross];
-      double timeSince    = destination.timestamp - start.timestamp;
-      double acceleration = (destination.speed - start.speed) / timeSince;
-      double timeCross    = [HCMPhysics timeFromDistance:distance velocity:start.speed acceleration:acceleration];
-      cross.generated     = TRUE;
-      cross.speed         = start.speed + acceleration * timeCross;
-      cross.bearing       = [start bearingToPoint:destination];
-      cross.timestamp     = start.timestamp + timeCross;
-      cross.lapDistance   = start.lapDistance + distance;
-      cross.lapTime       = start.lapTime + timeCross;
-      cross.splitTime     = start.splitTime + timeCross;
+      double timeSince    = destination->timestamp - start->timestamp;
+      double acceleration = (destination->speed - start->speed) / timeSince;
+      double timeCross    = [HCMPhysics timeFromDistance:distance velocity:start->speed acceleration:acceleration];
+      cross->generated    = TRUE;
+      cross->speed        = start->speed + acceleration * timeCross;
+      cross->bearing      = [start bearingToPoint:destination];
+      cross->timestamp    = start->timestamp + timeCross;
+      cross->lapDistance  = start->lapDistance + distance;
+      cross->lapTime      = start->lapTime + timeCross;
+      cross->splitTime    = start->splitTime + timeCross;
     }
   }
   return cross;

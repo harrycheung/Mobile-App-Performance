@@ -83,10 +83,10 @@ class ViewController: UIViewController {
       for point in points {
         HCMSessionManager.instance().gpsWithLatitude(point.latitudeDegrees(),
           longitude: point.longitudeDegrees(),
-          speed: point.speed,
-          bearing: point.bearing,
-          horizontalAccuracy: point.hAccuracy,
-          verticalAccuracy: point.vAccuracy,
+          speed: point.speed(),
+          bearing: point.bearing(),
+          horizontalAccuracy: point.hAccuracy(),
+          verticalAccuracy: point.vAccuracy(),
           timestamp: startTime)
         startTime += 1
       }

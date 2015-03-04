@@ -27,7 +27,7 @@
                                            latitude:[jsonGate[@"latitude"] doubleValue]
                                           longitude:[jsonGate[@"longitude"] doubleValue]
                                             bearing:[jsonGate[@"bearing"] doubleValue]];
-      if (gate.type == START_FINISH || gate.type == START) {
+      if (gate->type == START_FINISH || gate->type == START) {
         _start = gate;
       }
       [_gates addObject:gate];

@@ -92,8 +92,8 @@
         HCMPoint *point = points[i];
         [[HCMSessionManager instance] gpsWithLatitude:[point latitudeDegrees]
                                             longitude:[point longitudeDegrees]
-                                                speed:point.speed
-                                              bearing:point.bearing
+                                                speed:point->speed
+                                              bearing:point->bearing
                                    horizontalAccuracy:5.0
                                      verticalAccuracy:5.0
                                             timestamp:startTime];
@@ -107,7 +107,21 @@
 }
 
 - (IBAction)run1000:(id)sender {
-  _label1000.text = [NSString stringWithFormat:@"%.3f", [self run:1000]];
+//  NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+//  for (int i = 0; i < 10000; i++) {
+//    @autoreleasepool {
+//      NSMutableArray *aList = [[[NSMutableArray alloc] init] autorelease];
+//      for (int j = 0; j < [points count]; j++) {
+//        HCMPoint *point = points[j];
+//        [aList addObject:[[[HCMPoint alloc] initWithLatitude:[point latitudeDegrees] longitude:[point longitudeDegrees]] autorelease]];
+//      }
+//      for (int k = 0; k < [points count]; k++) {
+//        HCMPoint *dummy = aList[k];
+//      }
+//    }
+//  }
+//  _label1000.text = [NSString stringWithFormat:@"%.3f", [NSDate timeIntervalSinceReferenceDate] - start];
+  _label1000.text = [NSString stringWithFormat:@"%.3f", [self run:1000]];  
 }
 
 - (IBAction)run10000:(id)sender {

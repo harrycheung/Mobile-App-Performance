@@ -16,10 +16,12 @@ typedef NS_ENUM(NSInteger, HCMGateType) {
   SPLIT
 };
 
-@interface HCMGate : HCMPoint
-  
-@property HCMGateType type;
-@property int splitNumber;
+@interface HCMGate : HCMPoint {
+
+  @public
+  HCMGateType type;
+  int splitNumber;
+}
 
 - (id)initWithType:(HCMGateType)type
        splitNumber:(int)splitNumber

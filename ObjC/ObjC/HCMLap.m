@@ -31,8 +31,8 @@
 }
 
 - (void)addPoint:(HCMPoint *)point {
-  _duration = point.lapTime;
-  _distance = point.lapDistance;
+  _duration = point->lapTime;
+  _distance = point->lapDistance;
   [_points addObject:point];
 }
 

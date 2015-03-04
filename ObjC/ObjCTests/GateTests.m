@@ -35,8 +35,8 @@
                                 horizontalAccuracy:0
                                   verticalAccuracy:0
                                          timestamp:2];
-  b.lapDistance = 100.0;
-  b.lapTime = 0.1;
+  b->lapDistance = 100.0;
+  b->lapTime = 0.1;
   HCMPoint *c = [[HCMPoint alloc] initWithLatitude:37.45263
                                          longitude:-122.207023
                                              speed:14.15999984741211
@@ -48,15 +48,15 @@
   
   XCTAssertNil([gate crossedWithStart:a destination:b]);
   XCTAssertNil([gate crossedWithStart:c destination:b]);
-  XCTAssertTrue(cross.generated);
+  XCTAssertTrue(cross->generated);
   XCTAssertEqual([cross latitudeDegrees], 37.452593);
   XCTAssertEqual([cross longitudeDegrees], -122.207052);
-  XCTAssertEqualWithAccuracy(cross.speed, 14.18, 0.01);
-  XCTAssertEqualWithAccuracy(cross.bearing, 31.93, 0.01);
-  XCTAssertEqualWithAccuracy(cross.timestamp, 2.64915, 0.00001);
-  XCTAssertEqualWithAccuracy(cross.lapDistance, b.lapDistance + [b distanceToPoint:cross], 0.01);
-  XCTAssertEqualWithAccuracy(cross.lapTime, 0.74915, 0.00001);
-  XCTAssertEqualWithAccuracy(cross.splitTime, 0.64915, 0.00001);
+  XCTAssertEqualWithAccuracy(cross->speed, 14.18, 0.01);
+  XCTAssertEqualWithAccuracy(cross->bearing, 31.93, 0.01);
+  XCTAssertEqualWithAccuracy(cross->timestamp, 2.64915, 0.00001);
+  XCTAssertEqualWithAccuracy(cross->lapDistance, b->lapDistance + [b distanceToPoint:cross], 0.01);
+  XCTAssertEqualWithAccuracy(cross->lapTime, 0.74915, 0.00001);
+  XCTAssertEqualWithAccuracy(cross->splitTime, 0.64915, 0.00001);
 }
 
 @end

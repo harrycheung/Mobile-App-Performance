@@ -77,11 +77,11 @@
     HCMPoint *cross = [_nextGate crossedWithStart:_lastPoint destination:point];
     if (cross != nil) {
       [_currentLap addPoint:cross];
-      _currentLap.splits[_currentSplit] = cross.splitTime;
-      switch (_nextGate.type) {
+      _currentLap.splits[_currentSplit] = cross->splitTime;
+      switch (_nextGate->type) {
         case START_FINISH:
         case FINISH:
-          if ([_currentLap.points[0] generated]) {
+          if (((HCMPoint *)_currentLap.points[0])->generated) {
             _currentLap.valid = true;
             if (_bestLap == nil || _currentLap.duration < _bestLap.duration) {
               _bestLap = _currentLap;
@@ -92,18 +92,18 @@
           [_currentLap release];
           _currentLap = [[HCMLap alloc] initWithSession:_session
                                                   track:_track
-                                              startTime:cross.timestamp
+                                              startTime:cross->timestamp
                                               lapNumber:_lapNumber];
           _lastPoint = [[[HCMPoint alloc] initWithLatitude:[cross latitudeDegrees]
                                                 longitude:[cross longitudeDegrees]
-                                                    speed:cross.speed
-                                                  bearing:cross.bearing
-                                       horizontalAccuracy:cross.hAccuracy
-                                         verticalAccuracy:cross.vAccuracy
-                                                timestamp:cross.timestamp] autorelease];
-          _lastPoint.lapDistance = 0;
-          _lastPoint.lapTime = 0;
-          _lastPoint.generated = true;
+                                                    speed:cross->speed
+                                                  bearing:cross->bearing
+                                       horizontalAccuracy:cross->hAccuracy
+                                         verticalAccuracy:cross->vAccuracy
+                                                timestamp:cross->timestamp] autorelease];
+          _lastPoint->lapDistance = 0;
+          _lastPoint->lapTime = 0;
+          _lastPoint->generated = true;
           [_currentLap addPoint:_lastPoint];
           [_session.laps addObject:_currentLap];
           _gap = 0;
@@ -123,21 +123,21 @@
       if (_bestLap != nil && _bestIndex < _bestLap.points.count - 1) {
         while (_bestIndex < _bestLap.points.count - 1) {
           HCMPoint *refPoint = _bestLap.points[_bestIndex + 1];
-          if (refPoint.lapDistance > _currentLap.distance) { break; }
+          if (refPoint->lapDistance > _currentLap.distance) { break; }
           _bestIndex++;
         }
         HCMPoint *lastRefPoint = _bestLap.points[_bestIndex];
-        double distanceToLastRefPoint = _currentLap.distance - lastRefPoint.lapDistance;
+        double distanceToLastRefPoint = _currentLap.distance - lastRefPoint->lapDistance;
         if (distanceToLastRefPoint > 0) {
-          double sinceLastRefPoint = distanceToLastRefPoint / point.speed;
-          _gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
-          _splitGaps[_currentSplit] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
+          double sinceLastRefPoint = distanceToLastRefPoint / point->speed;
+          _gap = point->lapTime - sinceLastRefPoint - lastRefPoint->lapTime;
+          _splitGaps[_currentSplit] = point->splitTime - sinceLastRefPoint - lastRefPoint->splitTime;
         }
       }
-      _splitStartTime = cross.timestamp;
+      _splitStartTime = cross->timestamp;
       _nextGate = _track.gates[_currentSplit];
     }
-    point.lapDistance = _lastPoint.lapDistance + [_lastPoint distanceToPoint:point];
+    point->lapDistance = _lastPoint->lapDistance + [_lastPoint distanceToPoint:point];
     [point setLapTimeWithStartTime:_currentLap.startTime splitStartTime:_splitStartTime];
   }
   [_currentLap addPoint:point];
