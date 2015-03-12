@@ -12,4 +12,5 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'RubyMotionIOS'
   app.identifier = 'harrycheung.map.RubyMotionIOS'
+  app.archs['iPhoneOS'] = ['arm64']
 end

@@ -412,6 +412,7 @@
 					"$(J2OBJC_HOME)/include",
 				);
 				INFOPLIST_FILE = J2ObjCSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				J2OBJC_HOME = "/Users/harry/Projects/src/j2objc-0.9.6.1";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(J2OBJC_HOME)/lib";
@@ -421,6 +422,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = J2ObjCSwift/Bridge.h;
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Debug;
 		};
@@ -437,6 +439,7 @@
 					"$(J2OBJC_HOME)/include",
 				);
 				INFOPLIST_FILE = J2ObjCSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				J2OBJC_HOME = "/Users/harry/Projects/src/j2objc-0.9.6.1";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(J2OBJC_HOME)/lib";
@@ -447,7 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = J2ObjCSwift/Bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = NO;
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Release;
 		};
