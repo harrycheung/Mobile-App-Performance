@@ -62,22 +62,23 @@ module SessionManager
           else
             # do nothing
           end
-          if not @best_lap.nil? and @best_index < @best_lap.points.length - 1
-            while @best_index < @best_lap.points.length - 1 do
-              ref_point = @best_lap.points[@best_index + 1]
-              break if ref_point.lap_distance > @current_lap.distance
-              @best_index += 1
-            end
-            last_ref_point = @best_lap.points[@best_index]
-            distance_to_last_ref_point = @current_lap.distance - last_ref_point.lap_distance
-            if distance_to_last_ref_point > 0
-              since_last_ref_point = distance_to_last_ref_point / point.speed
-              @gap = point.lap_time - since_last_ref_point - last_ref_point.lap_time
-              @split_gaps[@current_split] = point.split_time - since_last_ref_point - last_ref_point.split_time
-            end
-          end
           @split_start_time = cross.timestamp
           @next_gate = @track.gates[@current_split]
+        end
+        if not @best_lap.nil? and @best_index < @best_lap.points.length
+          while @best_index < @best_lap.points.length do
+            ref_point = @best_lap.points[@best_index]
+            if ref_point.lap_distance > @current_lap.distance
+              last_ref_point = @best_lap.points[@best_index - 1]
+              distance_to_last_ref_point = @current_lap.distance - last_ref_point.lap_distance
+              if distance_to_last_ref_point > 0
+                since_last_ref_point = distance_to_last_ref_point / point.speed
+                @gap = point.lap_time - since_last_ref_point - last_ref_point.lap_time
+                @split_gaps[@current_split] = point.split_time - since_last_ref_point - last_ref_point.split_time
+              end
+            end
+            @best_index += 1
+          end
         end
         point.lap_distance = @last_point.lap_distance + @last_point.distance_to(point)
         point.set_lap_time(@current_lap.start_time, @split_start_time)

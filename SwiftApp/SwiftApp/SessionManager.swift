@@ -102,23 +102,24 @@ final class SessionManager {
           }
           currentSplit++
         }
-        
-        if bestLap != nil && bestIndex < bestLap!.points.count - 1 {
-          while bestIndex < bestLap!.points.count - 1 {
-            let refPoint = bestLap!.points[bestIndex + 1]
-            if refPoint.lapDistance > currentLap!.distance { break }
-            bestIndex++
-          }
-          let lastRefPoint = bestLap!.points[bestIndex]
-          let distanceToLastRefPoint = currentLap!.distance - lastRefPoint.lapDistance
-          if (distanceToLastRefPoint > 0) {
-            let sinceLastRefPoint = distanceToLastRefPoint / point.speed
-            gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime
-            splitGaps[splitNumber] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime
-          }
-        }
         splitStartTime = cross!.timestamp
         nextGate = track!.gates[currentSplit]
+      }
+      if bestLap != nil && bestIndex < bestLap!.points.count {
+        while bestIndex < bestLap!.points.count {
+          let refPoint = bestLap!.points[bestIndex]
+          if refPoint.lapDistance > currentLap!.distance {
+            let lastRefPoint = bestLap!.points[bestIndex - 1]
+            let distanceToLastRefPoint = currentLap!.distance - lastRefPoint.lapDistance
+            if (distanceToLastRefPoint > 0) {
+              let sinceLastRefPoint = distanceToLastRefPoint / point.speed
+              gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime
+              splitGaps[splitNumber] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime
+            }
+            break
+          }
+          bestIndex++
+        }
       }
       point.lapDistance = lastPoint!.lapDistance + lastPoint!.distanceTo(point)
       point.setLapTime(currentLap!.startTime, splitStartTime: splitStartTime)

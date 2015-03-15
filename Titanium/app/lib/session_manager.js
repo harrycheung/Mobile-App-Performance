@@ -93,23 +93,24 @@ SessionManager.prototype.gps = function(latitude, longitude, speed, bearing,
           }
           this.currentSplit++;
       }
-      
-      if (this.bestLap != null && this.bestIndex < this.bestLap.points.count - 1) {
-        while (this.bestIndex < this.bestLap.points.count - 1) {
-          var refPoint = this.bestLap.points[this.bestIndex + 1];
-          if (refPoint.lapDistance > this.currentLap.distance) { break; }
-          this.bestIndex++;
-        }
-        var lastRefPoint = this.bestLap.points[this.bestIndex];
-        var distanceToLastRefPoint = this.currentLap.distance - lastRefPoint.lapDistance;
-        if (distanceToLastRefPoint > 0) {
-          var sinceLastRefPoint = distanceToLastRefPoint / point.speed;
-          this.gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
-          this.splitGaps[this.splitNumber] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
-        }
-      }
       this.splitStartTime = cross.timestamp;
       this.nextGate = this.track.gates[this.currentSplit];
+    }
+    if (this.bestLap != null && this.bestIndex < this.bestLap.points.count) {
+      while (this.bestIndex < this.bestLap.points.count) {
+        var refPoint = this.bestLap.points[this.bestIndex];
+        if (refPoint.lapDistance > this.currentLap.distance) {
+          var lastRefPoint = this.bestLap.points[this.bestIndex - 1];
+          var distanceToLastRefPoint = this.currentLap.distance - lastRefPoint.lapDistance;
+          if (distanceToLastRefPoint > 0) {
+            var sinceLastRefPoint = distanceToLastRefPoint / point.speed;
+            this.gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
+            this.splitGaps[this.splitNumber] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
+          }
+          break; 
+         }
+        this.bestIndex++;
+      }
     }
     point.lapDistance = this.lastPoint.lapDistance + this.lastPoint.distanceTo(point);
     point.setLapTime(this.currentLap.startTime, this.splitStartTime);

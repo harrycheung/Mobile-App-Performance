@@ -87,24 +87,24 @@ public class SessionManager {
           }
           currentSplit++;
         }
-        if (bestLap != null && bestIndex < bestLap.points.size() - 1) {
-          while (bestIndex < bestLap.points.size() - 1) {
-            Point refPoint = bestLap.points.get(bestIndex + 1);
-            if (refPoint.lapDistance > currentLap.distance) {
-              break;
-            }
-            bestIndex++;
-          }
-          Point lastRefPoint = bestLap.points.get(bestIndex);
-          double distanceToLastRefPoint = currentLap.distance - lastRefPoint.lapDistance;
-          if (distanceToLastRefPoint > 0) {
-            double sinceLastRefPoint = distanceToLastRefPoint / point.speed;
-            gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
-            splitGaps[currentSplit] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
-          }
-        }
         splitStartTime = cross.timestamp;
         nextGate = track.gates[currentSplit];
+      }
+      if (bestLap != null && bestIndex < bestLap.points.size()) {
+        while (bestIndex < bestLap.points.size()) {
+          Point refPoint = bestLap.points.get(bestIndex);
+          if (refPoint.lapDistance > currentLap.distance) {
+            Point lastRefPoint = bestLap.points.get(bestIndex - 1);
+            double distanceToLastRefPoint = currentLap.distance - lastRefPoint.lapDistance;
+            if (distanceToLastRefPoint > 0) {
+              double sinceLastRefPoint = distanceToLastRefPoint / point.speed;
+              gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
+              splitGaps[currentSplit] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
+            }
+            break;
+          }
+          bestIndex++;
+        }
       }
       point.lapDistance = lastPoint.lapDistance + lastPoint.distanceTo(point);
       point.setLapTime(currentLap.startTime, splitStartTime);

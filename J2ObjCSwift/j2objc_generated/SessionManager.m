@@ -115,24 +115,24 @@ HCMSessionManager * HCMSessionManager_instance_;
         }
         currentSplit_++;
       }
-      if (bestLap_ != nil && bestIndex_ < [((id<JavaUtilList>) nil_chk(bestLap_->points_)) size] - 1) {
-        while (bestIndex_ < [bestLap_->points_ size] - 1) {
-          HCMPoint *refPoint = [bestLap_->points_ getWithInt:bestIndex_ + 1];
-          if (((HCMPoint *) nil_chk(refPoint))->lapDistance_ > currentLap_->distance_) {
-            break;
-          }
-          bestIndex_++;
-        }
-        HCMPoint *lastRefPoint = [bestLap_->points_ getWithInt:bestIndex_];
-        jdouble distanceToLastRefPoint = currentLap_->distance_ - ((HCMPoint *) nil_chk(lastRefPoint))->lapDistance_;
-        if (distanceToLastRefPoint > 0) {
-          jdouble sinceLastRefPoint = distanceToLastRefPoint / point->speed_;
-          gap_ = point->lapTime_ - sinceLastRefPoint - lastRefPoint->lapTime_;
-          *IOSDoubleArray_GetRef(nil_chk(splitGaps_), currentSplit_) = point->splitTime_ - sinceLastRefPoint - lastRefPoint->splitTime_;
-        }
-      }
       splitStartTime_ = cross->timestamp_;
       HCMSessionManager_set_nextGate_(self, IOSObjectArray_Get(nil_chk(((HCMTrack *) nil_chk(track_))->gates_), currentSplit_));
+    }
+    if (bestLap_ != nil && bestIndex_ < [((id<JavaUtilList>) nil_chk(bestLap_->points_)) size]) {
+      while (bestIndex_ < [bestLap_->points_ size]) {
+        HCMPoint *refPoint = [bestLap_->points_ getWithInt:bestIndex_];
+        if (((HCMPoint *) nil_chk(refPoint))->lapDistance_ > ((HCMLap *) nil_chk(currentLap_))->distance_) {
+          HCMPoint *lastRefPoint = [bestLap_->points_ getWithInt:bestIndex_ - 1];
+          jdouble distanceToLastRefPoint = currentLap_->distance_ - ((HCMPoint *) nil_chk(lastRefPoint))->lapDistance_;
+          if (distanceToLastRefPoint > 0) {
+            jdouble sinceLastRefPoint = distanceToLastRefPoint / point->speed_;
+            gap_ = point->lapTime_ - sinceLastRefPoint - lastRefPoint->lapTime_;
+            *IOSDoubleArray_GetRef(nil_chk(splitGaps_), currentSplit_) = point->splitTime_ - sinceLastRefPoint - lastRefPoint->splitTime_;
+          }
+          break;
+        }
+        bestIndex_++;
+      }
     }
     point->lapDistance_ = lastPoint_->lapDistance_ + [lastPoint_ distanceToWithHCMPoint:point];
     [point setLapTimeWithDouble:((HCMLap *) nil_chk(currentLap_))->startTime_ withDouble:splitStartTime_];

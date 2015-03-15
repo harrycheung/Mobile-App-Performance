@@ -119,23 +119,24 @@
           }
           _currentSplit++;
       }
-      
-      if (_bestLap != nil && _bestIndex < _bestLap.points.count - 1) {
-        while (_bestIndex < _bestLap.points.count - 1) {
-          HCMPoint *refPoint = _bestLap.points[_bestIndex + 1];
-          if (refPoint->lapDistance > _currentLap.distance) { break; }
-          _bestIndex++;
-        }
-        HCMPoint *lastRefPoint = _bestLap.points[_bestIndex];
-        double distanceToLastRefPoint = _currentLap.distance - lastRefPoint->lapDistance;
-        if (distanceToLastRefPoint > 0) {
-          double sinceLastRefPoint = distanceToLastRefPoint / point->speed;
-          _gap = point->lapTime - sinceLastRefPoint - lastRefPoint->lapTime;
-          _splitGaps[_currentSplit] = point->splitTime - sinceLastRefPoint - lastRefPoint->splitTime;
-        }
-      }
       _splitStartTime = cross->timestamp;
       _nextGate = _track.gates[_currentSplit];
+    }
+    if (_bestLap != nil && _bestIndex < _bestLap.points.count) {
+      while (_bestIndex < _bestLap.points.count) {
+        HCMPoint *refPoint = _bestLap.points[_bestIndex];
+        if (refPoint->lapDistance > _currentLap.distance) {
+          HCMPoint *lastRefPoint = _bestLap.points[_bestIndex - 1];
+          double distanceToLastRefPoint = _currentLap.distance - lastRefPoint->lapDistance;
+          if (distanceToLastRefPoint > 0) {
+            double sinceLastRefPoint = distanceToLastRefPoint / point->speed;
+            _gap = point->lapTime - sinceLastRefPoint - lastRefPoint->lapTime;
+            _splitGaps[_currentSplit] = point->splitTime - sinceLastRefPoint - lastRefPoint->splitTime;
+          }
+          break;
+        }
+        _bestIndex++;
+      }
     }
     point->lapDistance = _lastPoint->lapDistance + [_lastPoint distanceToPoint:point];
     [point setLapTimeWithStartTime:_currentLap.startTime splitStartTime:_splitStartTime];
