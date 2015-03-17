@@ -4,9 +4,9 @@
 
 import UIKit
 
-final class Session: NSObject {
+final class Session {
   
-  weak var track:     Track?
+  weak var track: Track?
   let startTime: Double
   var duration:  Double = 0
   var laps:      [Lap] = []
@@ -15,7 +15,6 @@ final class Session: NSObject {
   init(track: Track, startTime: Double) {
     self.track     = track
     self.startTime = startTime
-    super.init()
   }
   
   convenience init(track: Track) {

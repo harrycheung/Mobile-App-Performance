@@ -4,7 +4,7 @@
 
 import UIKit
 
-final class Track: NSObject {
+final class Track {
   
   var gates: [Gate] = []
   let id: Int!
@@ -31,7 +31,6 @@ final class Track: NSObject {
     id   = jsonTrack["id"]?.integerValue
     name = jsonTrack["name"] as! String
     
-    super.init()
     assert(id != nil)
     assert(name != nil)
     assert(start != nil)
