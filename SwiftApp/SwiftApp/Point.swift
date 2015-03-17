@@ -16,7 +16,7 @@ func == (left: Point, right: Point) -> Bool {
   return (left.latitudeDegrees() == right.latitudeDegrees()) && (left.longitudeDegrees() == right.longitudeDegrees())
 }
 
-class Point: NSObject, Equatable, Printable {
+class Point: Equatable {
   
   let RADIUS: Double = 6371000
   
