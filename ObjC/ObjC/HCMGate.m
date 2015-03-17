@@ -20,8 +20,8 @@
 
 @implementation HCMGate
 
-static double LINE_WIDTH = 30.0;
-static double BEARING_RANGE = 5.0;
+static double LINE_WIDTH = 80.0;
+static double BEARING_RANGE = 90.0;
 
 - (id)initWithType:(HCMGateType)type
        splitNumber:(int)splitNumber

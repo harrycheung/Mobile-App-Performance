@@ -14,8 +14,8 @@ GateType = {
   SPLIT : "SPLIT"
 };
 
-LINE_WIDTH = 30;
-BEARING_RANGE = 5;
+LINE_WIDTH = 80;
+BEARING_RANGE = 90;
 function Gate(type, splitNumber, latitude, longitude, bearing) {  
   this.type = type;
   this.splitNumber = splitNumber;
