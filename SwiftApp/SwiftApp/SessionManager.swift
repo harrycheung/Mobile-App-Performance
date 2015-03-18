@@ -13,7 +13,7 @@ final class SessionManager {
   var session: Session? = nil
   var currentLap: Lap?
   var bestLap: Lap?
-  var lastPoint: Point?
+  var lastPoint: Point = Point()
   var bestIndex: Int = 0
   var nextGate: Gate?
   var gateIter: Int = 0
@@ -61,11 +61,11 @@ final class SessionManager {
     var point = Point(latitude: latitude, longitude: longitude, speed: speed,
       bearing: bearing, horizontalAccuracy: horizontalAccuracy,
       verticalAccuracy: verticalAccuracy, timestamp: timestamp)
-    if lastPoint != nil {
-      var cross = nextGate!.crossed(start: lastPoint!, destination: point)
-      if cross != nil {
-        currentLap!.add(cross!)
-        currentLap!.splits[currentSplit] = cross!.splitTime
+    if currentLap!.points.count == 0 {
+      var cross: Point = Point()
+      if nextGate!.crossed(start: lastPoint, destination: point, cross: &cross) {
+        currentLap!.add(cross)
+        currentLap!.splits[currentSplit] = cross.splitTime
         switch nextGate!.type {
         case .START_FINISH, .FINISH:
           if currentLap!.points[0].generated {
@@ -77,18 +77,18 @@ final class SessionManager {
           fallthrough
         case .START:
           lapNumber += 1
-          currentLap = Lap(session: session!, track: track!, startTime: cross!.timestamp, lapNumber: lapNumber)
-          lastPoint = Point(latitude: cross!.latitudeDegrees(),
-            longitude: cross!.longitudeDegrees(),
-            speed: cross!.speed,
-            bearing: cross!.bearing,
-            horizontalAccuracy: cross!.hAccuracy,
-            verticalAccuracy: cross!.vAccuracy,
-            timestamp: cross!.timestamp)
-          lastPoint!.lapDistance = 0
-          lastPoint!.lapTime = 0
-          lastPoint!.generated = true
-          currentLap!.add(lastPoint!);
+          currentLap = Lap(session: session!, track: track!, startTime: cross.timestamp, lapNumber: lapNumber)
+          lastPoint = Point(latitude: cross.latitudeDegrees(),
+            longitude: cross.longitudeDegrees(),
+            speed: cross.speed,
+            bearing: cross.bearing,
+            horizontalAccuracy: cross.hAccuracy,
+            verticalAccuracy: cross.vAccuracy,
+            timestamp: cross.timestamp)
+          lastPoint.lapDistance = 0
+          lastPoint.lapTime = 0
+          lastPoint.generated = true
+          currentLap!.add(lastPoint);
           session!.laps.append(currentLap!)
           gap = 0
           for (index, gap) in enumerate(splitGaps) {
@@ -102,7 +102,7 @@ final class SessionManager {
           }
           currentSplit++
         }
-        splitStartTime = cross!.timestamp
+        splitStartTime = cross.timestamp
         nextGate = track!.gates[currentSplit]
       }
       if bestLap != nil && bestIndex < bestLap!.points.count {
@@ -121,7 +121,7 @@ final class SessionManager {
           bestIndex++
         }
       }
-      point.lapDistance = lastPoint!.lapDistance + lastPoint!.distanceTo(point)
+      point.lapDistance = lastPoint.lapDistance + lastPoint.distanceTo(point)
       point.setLapTime(currentLap!.startTime, splitStartTime: splitStartTime)
     }
     currentLap!.add(point)
