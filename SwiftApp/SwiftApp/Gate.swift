@@ -17,10 +17,12 @@ enum GateType: String, Printable {
   }
 }
 
-final class Gate: Point {
+
+final class Gate {
   
   let LINE_WIDTH:    Double = 30
   let BEARING_RANGE: Double = 5
+var location:Point
   
   let type: GateType
   let splitNumber: Int
@@ -29,19 +31,19 @@ final class Gate: Point {
   init(type: GateType, splitNumber: Int, latitude: Double, longitude: Double, bearing: Double) {
     self.type = type
     self.splitNumber = splitNumber
-    super.init(latitude: latitude, longitude: longitude, inRadians: false)
+    location = Point(latitude: latitude, longitude: longitude, inRadians: false)
     let leftBearing  = bearing - 90 < 0 ? bearing + 270 : bearing - 90
     let rightBearing = bearing + 90 > 360 ? bearing - 270 : bearing + 90
-    self.leftPoint  = destination(leftBearing, distance: LINE_WIDTH / 2)
-    self.rightPoint = destination(rightBearing, distance: LINE_WIDTH / 2)
-    self.bearing = bearing
+    self.leftPoint  = location.destination(leftBearing, distance: LINE_WIDTH / 2)
+    self.rightPoint = location.destination(rightBearing, distance: LINE_WIDTH / 2)
+    self.location.bearing = bearing
   }
   
   func crossed(#start: Point, destination: Point) -> Point? {
     let pathBearing = start.bearingTo(destination)
     var cross: Point? = nil
-    if pathBearing > (bearing - BEARING_RANGE) &&
-      pathBearing < (bearing + BEARING_RANGE) {
+    if pathBearing > (location.bearing - BEARING_RANGE) &&
+      pathBearing < (location.bearing + BEARING_RANGE) {
       cross = Point.intersectSimple(p: leftPoint!, p2: rightPoint!, q: start, q2: destination)
       if cross != nil {
         let distance     = start.distanceTo(cross!)

@@ -53,6 +53,6 @@ final class Track {
   }
   
   func distanceToStart(#latitude: Double, longitude: Double) -> Double {
-    return start.distanceTo(Point(latitude: latitude, longitude: longitude));
+    return start.location.distanceTo(Point(latitude: latitude, longitude: longitude));
   }
 }

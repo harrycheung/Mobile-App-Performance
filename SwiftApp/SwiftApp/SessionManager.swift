@@ -58,7 +58,7 @@ final class SessionManager {
   
   func gps(#latitude: Double, longitude: Double, speed: Double, bearing: Double,
     horizontalAccuracy: Double, verticalAccuracy: Double, timestamp: Double) {
-    let point = Point(latitude: latitude, longitude: longitude, speed: speed,
+    var point = Point(latitude: latitude, longitude: longitude, speed: speed,
       bearing: bearing, horizontalAccuracy: horizontalAccuracy,
       verticalAccuracy: verticalAccuracy, timestamp: timestamp)
     if lastPoint != nil {

@@ -16,7 +16,8 @@ func == (left: Point, right: Point) -> Bool {
   return (left.latitudeDegrees() == right.latitudeDegrees()) && (left.longitudeDegrees() == right.longitudeDegrees())
 }
 
-class Point: Equatable {
+
+struct Point: Equatable {
   
   let RADIUS: Double = 6371000
   
@@ -52,16 +53,16 @@ class Point: Equatable {
     self.acceleration = 0
   }
   
-  convenience init (latitude: Double, longitude: Double) {
+   init (latitude: Double, longitude: Double) {
     self.init(latitude: latitude, longitude: longitude, inRadians: false)
   }
   
-  convenience init (latitude: Double, longitude: Double, bearing: Double) {
+   init (latitude: Double, longitude: Double, bearing: Double) {
     self.init(latitude: latitude, longitude: longitude, inRadians: false)
     self.bearing = bearing
   }
   
-  convenience init (latitude: Double, longitude: Double, speed: Double, bearing: Double,
+   init (latitude: Double, longitude: Double, speed: Double, bearing: Double,
     horizontalAccuracy: Double, verticalAccuracy: Double, timestamp: Double) {
       self.init(latitude: latitude, longitude: longitude, inRadians: false)
       self.speed     = speed
@@ -71,7 +72,7 @@ class Point: Equatable {
       self.timestamp = timestamp
   }
   
-  func setLapTime(startTime: Double, splitStartTime: Double) {
+  mutating func setLapTime(startTime: Double, splitStartTime: Double) {
     lapTime = timestamp - startTime
     splitTime = timestamp - splitStartTime
   }
@@ -137,7 +138,7 @@ class Point: Equatable {
     return RADIUS * 2 * atan2(sqrt(a), sqrt(1 - a))
   }
   
-  class func intersectSimple(#p: Point, p2: Point, q: Point, q2: Point) -> Point? {
+  static func intersectSimple(#p: Point, p2: Point, q: Point, q2: Point) -> Point? {
     let s1_x = p2.longitude - p.longitude
     let s1_y = p2.latitude - p.latitude
     let s2_x = q2.longitude - q.longitude
