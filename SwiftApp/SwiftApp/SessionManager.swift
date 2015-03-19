@@ -61,7 +61,7 @@ final class SessionManager {
     var point = Point(latitude: latitude, longitude: longitude, speed: speed,
       bearing: bearing, horizontalAccuracy: horizontalAccuracy,
       verticalAccuracy: verticalAccuracy, timestamp: timestamp)
-    if currentLap!.points.count == 0 {
+    if currentLap!.points.count != 0 {
       var cross: Point = Point()
       if nextGate!.crossed(start: lastPoint, destination: point, cross: &cross) {
         currentLap!.add(cross)
