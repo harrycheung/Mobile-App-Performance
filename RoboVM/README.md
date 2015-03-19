@@ -5,7 +5,7 @@ Mobile App Performance - RoboVM
 This is the [RoboVM](http://www.robovm.com) version of [Harry Cheung's Mobile App Performance test sample](https://medium.com/@harrycheung/cross-platform-mobile-performance-testing-d0454f5cd4e9). RoboVM allows you to write native iOS apps using Java, Scala, Kotlin or any other JVM language.
 
 ## Running via Maven
-Ensure Maven is in your `$PATH`, then compile and deploy to your connected and provisioned device:
+Compile and deploy to your connected and provisioned device via
 
 32-bit device
 ```
@@ -15,6 +15,19 @@ mvn clean compile robovm:ios-device -Drobovm.arch=thumbv7
 64-bit device
 ```
 mvn clean compile robovm:ios-device -Drobovm.arch=arm64
+```
+
+## Running via Gradle
+Compile and deploy to your connected and provisioned device via
+
+32-bit device
+```
+./gradlew -Probovm.arch=thumbv7 compileJava launchIOSDevice
+```
+
+64-bit device
+```
+./gradlew -Probovm.arch=arm64 compileJava launchIOSDevice
 ```
 
 ## Running via Eclipse
