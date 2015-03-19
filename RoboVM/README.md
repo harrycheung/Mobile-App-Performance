@@ -1,5 +1,6 @@
 Mobile App Performance - RoboVM
 ===============================
+[![RoboVM Logo](http://sht.tl/VCgwqF)](http://www.robovm.com)
 This is the [RoboVM](http://www.robovm.com) version of [Harry Cheung's Mobile App Performance test sample](https://medium.com/@harrycheung/cross-platform-mobile-performance-testing-d0454f5cd4e9). RoboVM allows you to write native iOS apps using Java, Scala, Kotlin or any other JVM language.
 
 ## Running via Maven
