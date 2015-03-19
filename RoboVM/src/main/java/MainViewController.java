@@ -93,6 +93,7 @@ public class MainViewController extends UIViewController {
     getView().addSubview(button1000);
     label1000 = new UILabel();
     label1000.setFrame(new CGRect(0, 80, width, 30));
+    label1000.setTextAlignment(NSTextAlignment.Center);
     getView().addSubview(label1000);
 
     button10000 = UIButton.create(UIButtonType.RoundedRect);
@@ -107,6 +108,7 @@ public class MainViewController extends UIViewController {
     getView().addSubview(button10000);
     label10000 = new UILabel();
     label10000.setFrame(new CGRect(0, 160, width, 30));
+    label10000.setTextAlignment(NSTextAlignment.Center);
     getView().addSubview(label10000);
   }
 

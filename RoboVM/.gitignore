@@ -1,3 +1,6 @@
+.gradle/
+build/
+target/
 /bin/
 .settings/
 robovm-logs
