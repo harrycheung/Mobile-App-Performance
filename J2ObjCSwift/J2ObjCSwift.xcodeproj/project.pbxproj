@@ -24,7 +24,7 @@
 		4A2156091A91C31800589489 /* Gate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2155FE1A91C31800589489 /* Gate.m */; };
 		4A21560A1A91C31800589489 /* GateType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2156001A91C31800589489 /* GateType.m */; };
 		4A21560B1A91C31800589489 /* Lap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2156021A91C31800589489 /* Lap.m */; };
-		4A9741F31A92B3ED0074E80B /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9741F21A92B3ED0074E80B /* Assets */; };
+		4A67487F1ABBC783007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A67487E1ABBC783007626E0 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +67,8 @@
 		4A2156001A91C31800589489 /* GateType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GateType.m; path = j2objc_generated/GateType.m; sourceTree = SOURCE_ROOT; };
 		4A2156011A91C31800589489 /* Lap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lap.h; path = j2objc_generated/Lap.h; sourceTree = SOURCE_ROOT; };
 		4A2156021A91C31800589489 /* Lap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lap.m; path = j2objc_generated/Lap.m; sourceTree = SOURCE_ROOT; };
+		4A67487E1ABBC783007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
 		4A9741F11A9246400074E80B /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
-		4A9741F21A92B3ED0074E80B /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		4A2155BD1A91B5D500589489 = {
 			isa = PBXGroup;
 			children = (
-				4A9741F21A92B3ED0074E80B /* Assets */,
+				4A67487E1ABBC783007626E0 /* Data */,
 				4A2155EF1A91B6D500589489 /* libz.dylib */,
 				4A2155ED1A91B6C400589489 /* Security.framework */,
 				4A2155EB1A91B6BF00589489 /* libicucore.dylib */,
@@ -250,8 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2155D11A91B5D500589489 /* Main.storyboard in Resources */,
-				4A9741F31A92B3ED0074E80B /* Assets in Resources */,
 				4A2155D61A91B5D500589489 /* LaunchScreen.xib in Resources */,
+				4A67487F1ABBC783007626E0 /* Data in Resources */,
 				4A2155D31A91B5D500589489 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

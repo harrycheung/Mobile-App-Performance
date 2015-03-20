@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6748531ABBB927007626E0 /* HCMGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748451ABBB927007626E0 /* HCMGate.m */; };
+		4A6748541ABBB927007626E0 /* HCMLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748461ABBB927007626E0 /* HCMLap.m */; };
+		4A6748551ABBB927007626E0 /* HCMPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748471ABBB927007626E0 /* HCMPhysics.m */; };
+		4A6748561ABBB927007626E0 /* HCMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748481ABBB927007626E0 /* HCMPoint.m */; };
+		4A6748571ABBB927007626E0 /* HCMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748491ABBB927007626E0 /* HCMSession.m */; };
+		4A6748581ABBB927007626E0 /* HCMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67484A1ABBB927007626E0 /* HCMSessionManager.m */; };
+		4A6748591ABBB927007626E0 /* HCMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67484B1ABBB927007626E0 /* HCMTrack.m */; };
+		4A67485A1ABBB949007626E0 /* HCMGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748451ABBB927007626E0 /* HCMGate.m */; };
+		4A67485B1ABBB949007626E0 /* HCMLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748461ABBB927007626E0 /* HCMLap.m */; };
+		4A67485C1ABBB949007626E0 /* HCMPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748471ABBB927007626E0 /* HCMPhysics.m */; };
+		4A67485D1ABBB949007626E0 /* HCMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748481ABBB927007626E0 /* HCMPoint.m */; };
+		4A67485E1ABBB949007626E0 /* HCMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748491ABBB927007626E0 /* HCMSession.m */; };
+		4A67485F1ABBB949007626E0 /* HCMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67484A1ABBB927007626E0 /* HCMSessionManager.m */; };
+		4A6748601ABBB949007626E0 /* HCMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67484B1ABBB927007626E0 /* HCMTrack.m */; };
+		4A6748641ABBBA2C007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A6748631ABBBA2C007626E0 /* Data */; };
 		4A7FB5161AA4FB2D00857629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5151AA4FB2D00857629 /* main.m */; };
 		4A7FB5191AA4FB2D00857629 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5181AA4FB2D00857629 /* AppDelegate.m */; };
 		4A7FB51C1AA4FB2D00857629 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB51B1AA4FB2D00857629 /* ViewController.m */; };
 		4A7FB51F1AA4FB2D00857629 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7FB51D1AA4FB2D00857629 /* Main.storyboard */; };
 		4A7FB5211AA4FB2D00857629 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7FB5201AA4FB2D00857629 /* Images.xcassets */; };
 		4A7FB5241AA4FB2D00857629 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7FB5221AA4FB2D00857629 /* LaunchScreen.xib */; };
-		4A7FB5471AA4FB8B00857629 /* HCMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5391AA4FB8B00857629 /* HCMPoint.m */; };
-		4A7FB5481AA4FB8B00857629 /* HCMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53A1AA4FB8B00857629 /* HCMSessionManager.m */; };
-		4A7FB5491AA4FB8B00857629 /* HCMGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53B1AA4FB8B00857629 /* HCMGate.m */; };
-		4A7FB54A1AA4FB8B00857629 /* HCMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53C1AA4FB8B00857629 /* HCMTrack.m */; };
-		4A7FB54B1AA4FB8B00857629 /* HCMLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53F1AA4FB8B00857629 /* HCMLap.m */; };
-		4A7FB54C1AA4FB8B00857629 /* HCMPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5411AA4FB8B00857629 /* HCMPhysics.m */; };
-		4A7FB54D1AA4FB8B00857629 /* HCMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5441AA4FB8B00857629 /* HCMSession.m */; };
-		4A7FB54F1AA4FB9400857629 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7FB54E1AA4FB9400857629 /* Assets */; };
 		4A7FB5551AA4FBBB00857629 /* GateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5501AA4FBBB00857629 /* GateTests.m */; };
 		4A7FB5561AA4FBBB00857629 /* SessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5511AA4FBBB00857629 /* SessionTests.m */; };
 		4A7FB5571AA4FBBB00857629 /* TrackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5521AA4FBBB00857629 /* TrackTests.m */; };
 		4A7FB5581AA4FBBB00857629 /* PhysicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5531AA4FBBB00857629 /* PhysicsTests.m */; };
 		4A7FB5591AA4FBBB00857629 /* PointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5541AA4FBBB00857629 /* PointTests.m */; };
-		4A7FB55A1AA4FCCA00857629 /* HCMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5391AA4FB8B00857629 /* HCMPoint.m */; };
-		4A7FB55B1AA4FCCA00857629 /* HCMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53A1AA4FB8B00857629 /* HCMSessionManager.m */; };
-		4A7FB55C1AA4FCCA00857629 /* HCMGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53B1AA4FB8B00857629 /* HCMGate.m */; };
-		4A7FB55D1AA4FCCA00857629 /* HCMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53C1AA4FB8B00857629 /* HCMTrack.m */; };
-		4A7FB55E1AA4FCCA00857629 /* HCMLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB53F1AA4FB8B00857629 /* HCMLap.m */; };
-		4A7FB55F1AA4FCCA00857629 /* HCMPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5411AA4FB8B00857629 /* HCMPhysics.m */; };
-		4A7FB5601AA4FCCA00857629 /* HCMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FB5441AA4FB8B00857629 /* HCMSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A6748451ABBB927007626E0 /* HCMGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMGate.m; path = ../../Shared/ObjC/HCMGate.m; sourceTree = "<group>"; };
+		4A6748461ABBB927007626E0 /* HCMLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMLap.m; path = ../../Shared/ObjC/HCMLap.m; sourceTree = "<group>"; };
+		4A6748471ABBB927007626E0 /* HCMPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMPhysics.m; path = ../../Shared/ObjC/HCMPhysics.m; sourceTree = "<group>"; };
+		4A6748481ABBB927007626E0 /* HCMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMPoint.m; path = ../../Shared/ObjC/HCMPoint.m; sourceTree = "<group>"; };
+		4A6748491ABBB927007626E0 /* HCMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMSession.m; path = ../../Shared/ObjC/HCMSession.m; sourceTree = "<group>"; };
+		4A67484A1ABBB927007626E0 /* HCMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMSessionManager.m; path = ../../Shared/ObjC/HCMSessionManager.m; sourceTree = "<group>"; };
+		4A67484B1ABBB927007626E0 /* HCMTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMTrack.m; path = ../../Shared/ObjC/HCMTrack.m; sourceTree = "<group>"; };
+		4A67484C1ABBB927007626E0 /* HCMGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMGate.h; path = ../../Shared/ObjC/HCMGate.h; sourceTree = "<group>"; };
+		4A67484D1ABBB927007626E0 /* HCMLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMLap.h; path = ../../Shared/ObjC/HCMLap.h; sourceTree = "<group>"; };
+		4A67484E1ABBB927007626E0 /* HCMPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMPhysics.h; path = ../../Shared/ObjC/HCMPhysics.h; sourceTree = "<group>"; };
+		4A67484F1ABBB927007626E0 /* HCMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMPoint.h; path = ../../Shared/ObjC/HCMPoint.h; sourceTree = "<group>"; };
+		4A6748501ABBB927007626E0 /* HCMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMSession.h; path = ../../Shared/ObjC/HCMSession.h; sourceTree = "<group>"; };
+		4A6748511ABBB927007626E0 /* HCMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMSessionManager.h; path = ../../Shared/ObjC/HCMSessionManager.h; sourceTree = "<group>"; };
+		4A6748521ABBB927007626E0 /* HCMTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMTrack.h; path = ../../Shared/ObjC/HCMTrack.h; sourceTree = "<group>"; };
+		4A6748631ABBBA2C007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
 		4A7FB5101AA4FB2D00857629 /* ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7FB5141AA4FB2D00857629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7FB5151AA4FB2D00857629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -58,21 +73,6 @@
 		4A7FB5231AA4FB2D00857629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4A7FB5291AA4FB2D00857629 /* ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7FB52E1AA4FB2D00857629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A7FB5391AA4FB8B00857629 /* HCMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMPoint.m; sourceTree = "<group>"; };
-		4A7FB53A1AA4FB8B00857629 /* HCMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMSessionManager.m; sourceTree = "<group>"; };
-		4A7FB53B1AA4FB8B00857629 /* HCMGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMGate.m; sourceTree = "<group>"; };
-		4A7FB53C1AA4FB8B00857629 /* HCMTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMTrack.m; sourceTree = "<group>"; };
-		4A7FB53D1AA4FB8B00857629 /* HCMGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMGate.h; sourceTree = "<group>"; };
-		4A7FB53E1AA4FB8B00857629 /* HCMLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMLap.h; sourceTree = "<group>"; };
-		4A7FB53F1AA4FB8B00857629 /* HCMLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMLap.m; sourceTree = "<group>"; };
-		4A7FB5401AA4FB8B00857629 /* HCMPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMPhysics.h; sourceTree = "<group>"; };
-		4A7FB5411AA4FB8B00857629 /* HCMPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMPhysics.m; sourceTree = "<group>"; };
-		4A7FB5421AA4FB8B00857629 /* HCMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMPoint.h; sourceTree = "<group>"; };
-		4A7FB5431AA4FB8B00857629 /* HCMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMSession.h; sourceTree = "<group>"; };
-		4A7FB5441AA4FB8B00857629 /* HCMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMSession.m; sourceTree = "<group>"; };
-		4A7FB5451AA4FB8B00857629 /* HCMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMSessionManager.h; sourceTree = "<group>"; };
-		4A7FB5461AA4FB8B00857629 /* HCMTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMTrack.h; sourceTree = "<group>"; };
-		4A7FB54E1AA4FB9400857629 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
 		4A7FB5501AA4FBBB00857629 /* GateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GateTests.m; sourceTree = "<group>"; };
 		4A7FB5511AA4FBBB00857629 /* SessionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTests.m; sourceTree = "<group>"; };
 		4A7FB5521AA4FBBB00857629 /* TrackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTests.m; sourceTree = "<group>"; };
@@ -101,6 +101,7 @@
 		4A7FB5071AA4FB2D00857629 = {
 			isa = PBXGroup;
 			children = (
+				4A6748631ABBBA2C007626E0 /* Data */,
 				4A7FB5121AA4FB2D00857629 /* ObjC */,
 				4A7FB52C1AA4FB2D00857629 /* ObjCTests */,
 				4A7FB5111AA4FB2D00857629 /* Products */,
@@ -119,23 +120,22 @@
 		4A7FB5121AA4FB2D00857629 /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				4A6748451ABBB927007626E0 /* HCMGate.m */,
+				4A6748461ABBB927007626E0 /* HCMLap.m */,
+				4A6748471ABBB927007626E0 /* HCMPhysics.m */,
+				4A6748481ABBB927007626E0 /* HCMPoint.m */,
+				4A6748491ABBB927007626E0 /* HCMSession.m */,
+				4A67484A1ABBB927007626E0 /* HCMSessionManager.m */,
+				4A67484B1ABBB927007626E0 /* HCMTrack.m */,
+				4A67484C1ABBB927007626E0 /* HCMGate.h */,
+				4A67484D1ABBB927007626E0 /* HCMLap.h */,
+				4A67484E1ABBB927007626E0 /* HCMPhysics.h */,
+				4A67484F1ABBB927007626E0 /* HCMPoint.h */,
+				4A6748501ABBB927007626E0 /* HCMSession.h */,
+				4A6748511ABBB927007626E0 /* HCMSessionManager.h */,
+				4A6748521ABBB927007626E0 /* HCMTrack.h */,
 				4A7FB5171AA4FB2D00857629 /* AppDelegate.h */,
 				4A7FB5181AA4FB2D00857629 /* AppDelegate.m */,
-				4A7FB54E1AA4FB9400857629 /* Assets */,
-				4A7FB53D1AA4FB8B00857629 /* HCMGate.h */,
-				4A7FB53B1AA4FB8B00857629 /* HCMGate.m */,
-				4A7FB53E1AA4FB8B00857629 /* HCMLap.h */,
-				4A7FB53F1AA4FB8B00857629 /* HCMLap.m */,
-				4A7FB5401AA4FB8B00857629 /* HCMPhysics.h */,
-				4A7FB5411AA4FB8B00857629 /* HCMPhysics.m */,
-				4A7FB5421AA4FB8B00857629 /* HCMPoint.h */,
-				4A7FB5391AA4FB8B00857629 /* HCMPoint.m */,
-				4A7FB5431AA4FB8B00857629 /* HCMSession.h */,
-				4A7FB5441AA4FB8B00857629 /* HCMSession.m */,
-				4A7FB5451AA4FB8B00857629 /* HCMSessionManager.h */,
-				4A7FB53A1AA4FB8B00857629 /* HCMSessionManager.m */,
-				4A7FB5461AA4FB8B00857629 /* HCMTrack.h */,
-				4A7FB53C1AA4FB8B00857629 /* HCMTrack.m */,
 				4A7FB5201AA4FB2D00857629 /* Images.xcassets */,
 				4A7FB5221AA4FB2D00857629 /* LaunchScreen.xib */,
 				4A7FB51D1AA4FB2D00857629 /* Main.storyboard */,
@@ -220,7 +220,7 @@
 		4A7FB5081AA4FB2D00857629 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Harry Cheung";
 				TargetAttributes = {
 					4A7FB50F1AA4FB2D00857629 = {
@@ -257,8 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7FB51F1AA4FB2D00857629 /* Main.storyboard in Resources */,
-				4A7FB54F1AA4FB9400857629 /* Assets in Resources */,
 				4A7FB5241AA4FB2D00857629 /* LaunchScreen.xib in Resources */,
+				4A6748641ABBBA2C007626E0 /* Data in Resources */,
 				4A7FB5211AA4FB2D00857629 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,16 +277,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7FB54B1AA4FB8B00857629 /* HCMLap.m in Sources */,
 				4A7FB51C1AA4FB2D00857629 /* ViewController.m in Sources */,
-				4A7FB54C1AA4FB8B00857629 /* HCMPhysics.m in Sources */,
-				4A7FB5491AA4FB8B00857629 /* HCMGate.m in Sources */,
+				4A6748531ABBB927007626E0 /* HCMGate.m in Sources */,
+				4A6748551ABBB927007626E0 /* HCMPhysics.m in Sources */,
+				4A6748571ABBB927007626E0 /* HCMSession.m in Sources */,
+				4A6748591ABBB927007626E0 /* HCMTrack.m in Sources */,
+				4A6748581ABBB927007626E0 /* HCMSessionManager.m in Sources */,
 				4A7FB5191AA4FB2D00857629 /* AppDelegate.m in Sources */,
-				4A7FB54A1AA4FB8B00857629 /* HCMTrack.m in Sources */,
-				4A7FB5481AA4FB8B00857629 /* HCMSessionManager.m in Sources */,
-				4A7FB54D1AA4FB8B00857629 /* HCMSession.m in Sources */,
 				4A7FB5161AA4FB2D00857629 /* main.m in Sources */,
-				4A7FB5471AA4FB8B00857629 /* HCMPoint.m in Sources */,
+				4A6748541ABBB927007626E0 /* HCMLap.m in Sources */,
+				4A6748561ABBB927007626E0 /* HCMPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,13 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7FB55A1AA4FCCA00857629 /* HCMPoint.m in Sources */,
-				4A7FB55B1AA4FCCA00857629 /* HCMSessionManager.m in Sources */,
-				4A7FB55C1AA4FCCA00857629 /* HCMGate.m in Sources */,
-				4A7FB55D1AA4FCCA00857629 /* HCMTrack.m in Sources */,
-				4A7FB55E1AA4FCCA00857629 /* HCMLap.m in Sources */,
-				4A7FB55F1AA4FCCA00857629 /* HCMPhysics.m in Sources */,
-				4A7FB5601AA4FCCA00857629 /* HCMSession.m in Sources */,
+				4A67485A1ABBB949007626E0 /* HCMGate.m in Sources */,
+				4A67485B1ABBB949007626E0 /* HCMLap.m in Sources */,
+				4A67485C1ABBB949007626E0 /* HCMPhysics.m in Sources */,
+				4A67485D1ABBB949007626E0 /* HCMPoint.m in Sources */,
+				4A67485E1ABBB949007626E0 /* HCMSession.m in Sources */,
+				4A67485F1ABBB949007626E0 /* HCMSessionManager.m in Sources */,
+				4A6748601ABBB949007626E0 /* HCMTrack.m in Sources */,
 				4A7FB5561AA4FBBB00857629 /* SessionTests.m in Sources */,
 				4A7FB5571AA4FBBB00857629 /* TrackTests.m in Sources */,
 				4A7FB5591AA4FBBB00857629 /* PointTests.m in Sources */,
@@ -343,7 +343,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -386,7 +385,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6748661ABBBA7C007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A6748651ABBBA7C007626E0 /* Data */; };
+		4A6748751ABBBA98007626E0 /* HCMGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748671ABBBA98007626E0 /* HCMGate.m */; };
+		4A6748761ABBBA98007626E0 /* HCMLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748681ABBBA98007626E0 /* HCMLap.m */; };
+		4A6748771ABBBA98007626E0 /* HCMPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6748691ABBBA98007626E0 /* HCMPhysics.m */; };
+		4A6748781ABBBA98007626E0 /* HCMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67486A1ABBBA98007626E0 /* HCMPoint.m */; };
+		4A6748791ABBBA98007626E0 /* HCMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67486B1ABBBA98007626E0 /* HCMSession.m */; };
+		4A67487A1ABBBA98007626E0 /* HCMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67486C1ABBBA98007626E0 /* HCMSessionManager.m */; };
+		4A67487B1ABBBA98007626E0 /* HCMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A67486D1ABBBA98007626E0 /* HCMTrack.m */; };
 		4AC25BAB1AA5452700267791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BAA1AA5452700267791 /* AppDelegate.swift */; };
 		4AC25BAD1AA5452700267791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BAC1AA5452700267791 /* ViewController.swift */; };
 		4AC25BB01AA5452700267791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC25BAE1AA5452700267791 /* Main.storyboard */; };
 		4AC25BB21AA5452700267791 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC25BB11AA5452700267791 /* Images.xcassets */; };
 		4AC25BB51AA5452700267791 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC25BB31AA5452700267791 /* LaunchScreen.xib */; };
 		4AC25BC11AA5452700267791 /* ObjCSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BC01AA5452700267791 /* ObjCSwiftTests.swift */; };
-		4AC25BCB1AA5459600267791 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC25BCA1AA5459600267791 /* Assets */; };
-		4AC25BDB1AA545A500267791 /* HCMGate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BCD1AA545A500267791 /* HCMGate.m */; };
-		4AC25BDC1AA545A500267791 /* HCMLap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BCF1AA545A500267791 /* HCMLap.m */; };
-		4AC25BDD1AA545A500267791 /* HCMPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BD11AA545A500267791 /* HCMPhysics.m */; };
-		4AC25BDE1AA545A500267791 /* HCMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BD31AA545A500267791 /* HCMPoint.m */; };
-		4AC25BDF1AA545A500267791 /* HCMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BD51AA545A500267791 /* HCMSession.m */; };
-		4AC25BE01AA545A500267791 /* HCMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BD71AA545A500267791 /* HCMSessionManager.m */; };
-		4AC25BE11AA545A500267791 /* HCMTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC25BD91AA545A500267791 /* HCMTrack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A6748651ABBBA7C007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
+		4A6748671ABBBA98007626E0 /* HCMGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMGate.m; path = ../Shared/ObjC/HCMGate.m; sourceTree = "<group>"; };
+		4A6748681ABBBA98007626E0 /* HCMLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMLap.m; path = ../Shared/ObjC/HCMLap.m; sourceTree = "<group>"; };
+		4A6748691ABBBA98007626E0 /* HCMPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMPhysics.m; path = ../Shared/ObjC/HCMPhysics.m; sourceTree = "<group>"; };
+		4A67486A1ABBBA98007626E0 /* HCMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMPoint.m; path = ../Shared/ObjC/HCMPoint.m; sourceTree = "<group>"; };
+		4A67486B1ABBBA98007626E0 /* HCMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMSession.m; path = ../Shared/ObjC/HCMSession.m; sourceTree = "<group>"; };
+		4A67486C1ABBBA98007626E0 /* HCMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMSessionManager.m; path = ../Shared/ObjC/HCMSessionManager.m; sourceTree = "<group>"; };
+		4A67486D1ABBBA98007626E0 /* HCMTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCMTrack.m; path = ../Shared/ObjC/HCMTrack.m; sourceTree = "<group>"; };
+		4A67486E1ABBBA98007626E0 /* HCMGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMGate.h; path = ../Shared/ObjC/HCMGate.h; sourceTree = "<group>"; };
+		4A67486F1ABBBA98007626E0 /* HCMLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMLap.h; path = ../Shared/ObjC/HCMLap.h; sourceTree = "<group>"; };
+		4A6748701ABBBA98007626E0 /* HCMPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMPhysics.h; path = ../Shared/ObjC/HCMPhysics.h; sourceTree = "<group>"; };
+		4A6748711ABBBA98007626E0 /* HCMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMPoint.h; path = ../Shared/ObjC/HCMPoint.h; sourceTree = "<group>"; };
+		4A6748721ABBBA98007626E0 /* HCMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMSession.h; path = ../Shared/ObjC/HCMSession.h; sourceTree = "<group>"; };
+		4A6748731ABBBA98007626E0 /* HCMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMSessionManager.h; path = ../Shared/ObjC/HCMSessionManager.h; sourceTree = "<group>"; };
+		4A6748741ABBBA98007626E0 /* HCMTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMTrack.h; path = ../Shared/ObjC/HCMTrack.h; sourceTree = "<group>"; };
 		4AC25BA51AA5452700267791 /* ObjCSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC25BA91AA5452700267791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC25BAA1AA5452700267791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,21 +59,6 @@
 		4AC25BBA1AA5452700267791 /* ObjCSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjCSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC25BBF1AA5452700267791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC25BC01AA5452700267791 /* ObjCSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCSwiftTests.swift; sourceTree = "<group>"; };
-		4AC25BCA1AA5459600267791 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		4AC25BCC1AA545A500267791 /* HCMGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMGate.h; sourceTree = "<group>"; };
-		4AC25BCD1AA545A500267791 /* HCMGate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMGate.m; sourceTree = "<group>"; };
-		4AC25BCE1AA545A500267791 /* HCMLap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMLap.h; sourceTree = "<group>"; };
-		4AC25BCF1AA545A500267791 /* HCMLap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMLap.m; sourceTree = "<group>"; };
-		4AC25BD01AA545A500267791 /* HCMPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMPhysics.h; sourceTree = "<group>"; };
-		4AC25BD11AA545A500267791 /* HCMPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMPhysics.m; sourceTree = "<group>"; };
-		4AC25BD21AA545A500267791 /* HCMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMPoint.h; sourceTree = "<group>"; };
-		4AC25BD31AA545A500267791 /* HCMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMPoint.m; sourceTree = "<group>"; };
-		4AC25BD41AA545A500267791 /* HCMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMSession.h; sourceTree = "<group>"; };
-		4AC25BD51AA545A500267791 /* HCMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMSession.m; sourceTree = "<group>"; };
-		4AC25BD61AA545A500267791 /* HCMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMSessionManager.h; sourceTree = "<group>"; };
-		4AC25BD71AA545A500267791 /* HCMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMSessionManager.m; sourceTree = "<group>"; };
-		4AC25BD81AA545A500267791 /* HCMTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMTrack.h; sourceTree = "<group>"; };
-		4AC25BD91AA545A500267791 /* HCMTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMTrack.m; sourceTree = "<group>"; };
 		4AC25BDA1AA545A500267791 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,21 @@
 		4AC25B9C1AA5452700267791 = {
 			isa = PBXGroup;
 			children = (
-				4AC25BCA1AA5459600267791 /* Assets */,
+				4A6748671ABBBA98007626E0 /* HCMGate.m */,
+				4A6748681ABBBA98007626E0 /* HCMLap.m */,
+				4A6748691ABBBA98007626E0 /* HCMPhysics.m */,
+				4A67486A1ABBBA98007626E0 /* HCMPoint.m */,
+				4A67486B1ABBBA98007626E0 /* HCMSession.m */,
+				4A67486C1ABBBA98007626E0 /* HCMSessionManager.m */,
+				4A67486D1ABBBA98007626E0 /* HCMTrack.m */,
+				4A67486E1ABBBA98007626E0 /* HCMGate.h */,
+				4A67486F1ABBBA98007626E0 /* HCMLap.h */,
+				4A6748701ABBBA98007626E0 /* HCMPhysics.h */,
+				4A6748711ABBBA98007626E0 /* HCMPoint.h */,
+				4A6748721ABBBA98007626E0 /* HCMSession.h */,
+				4A6748731ABBBA98007626E0 /* HCMSessionManager.h */,
+				4A6748741ABBBA98007626E0 /* HCMTrack.h */,
+				4A6748651ABBBA7C007626E0 /* Data */,
 				4AC25BA71AA5452700267791 /* ObjCSwift */,
 				4AC25BBD1AA5452700267791 /* ObjCSwiftTests */,
 				4AC25BA61AA5452700267791 /* Products */,
@@ -102,20 +116,6 @@
 		4AC25BA71AA5452700267791 /* ObjCSwift */ = {
 			isa = PBXGroup;
 			children = (
-				4AC25BCC1AA545A500267791 /* HCMGate.h */,
-				4AC25BCD1AA545A500267791 /* HCMGate.m */,
-				4AC25BCE1AA545A500267791 /* HCMLap.h */,
-				4AC25BCF1AA545A500267791 /* HCMLap.m */,
-				4AC25BD01AA545A500267791 /* HCMPhysics.h */,
-				4AC25BD11AA545A500267791 /* HCMPhysics.m */,
-				4AC25BD21AA545A500267791 /* HCMPoint.h */,
-				4AC25BD31AA545A500267791 /* HCMPoint.m */,
-				4AC25BD41AA545A500267791 /* HCMSession.h */,
-				4AC25BD51AA545A500267791 /* HCMSession.m */,
-				4AC25BD61AA545A500267791 /* HCMSessionManager.h */,
-				4AC25BD71AA545A500267791 /* HCMSessionManager.m */,
-				4AC25BD81AA545A500267791 /* HCMTrack.h */,
-				4AC25BD91AA545A500267791 /* HCMTrack.m */,
 				4AC25BDA1AA545A500267791 /* Bridge.h */,
 				4AC25BAA1AA5452700267791 /* AppDelegate.swift */,
 				4AC25BAC1AA5452700267791 /* ViewController.swift */,
@@ -233,8 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC25BB01AA5452700267791 /* Main.storyboard in Resources */,
-				4AC25BCB1AA5459600267791 /* Assets in Resources */,
 				4AC25BB51AA5452700267791 /* LaunchScreen.xib in Resources */,
+				4A6748661ABBBA7C007626E0 /* Data in Resources */,
 				4AC25BB21AA5452700267791 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,14 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC25BE11AA545A500267791 /* HCMTrack.m in Sources */,
-				4AC25BDF1AA545A500267791 /* HCMSession.m in Sources */,
-				4AC25BDC1AA545A500267791 /* HCMLap.m in Sources */,
+				4A67487B1ABBBA98007626E0 /* HCMTrack.m in Sources */,
+				4A6748791ABBBA98007626E0 /* HCMSession.m in Sources */,
+				4A6748761ABBBA98007626E0 /* HCMLap.m in Sources */,
 				4AC25BAD1AA5452700267791 /* ViewController.swift in Sources */,
-				4AC25BDD1AA545A500267791 /* HCMPhysics.m in Sources */,
-				4AC25BDE1AA545A500267791 /* HCMPoint.m in Sources */,
-				4AC25BE01AA545A500267791 /* HCMSessionManager.m in Sources */,
-				4AC25BDB1AA545A500267791 /* HCMGate.m in Sources */,
+				4A6748771ABBBA98007626E0 /* HCMPhysics.m in Sources */,
+				4A6748781ABBBA98007626E0 /* HCMPoint.m in Sources */,
+				4A67487A1ABBBA98007626E0 /* HCMSessionManager.m in Sources */,
+				4A6748751ABBBA98007626E0 /* HCMGate.m in Sources */,
 				4AC25BAB1AA5452700267791 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +339,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-beta\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -377,6 +381,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode-beta\\ 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

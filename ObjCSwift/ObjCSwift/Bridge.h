@@ -9,8 +9,8 @@
 #ifndef ObjCSwift_Bridge_h
 #define ObjCSwift_Bridge_h
 
-#import "HCMSessionManager.h"
-#import "HCMTrack.h"
-#import "HCMPoint.h"
+#import "../../Shared/ObjC/HCMSessionManager.h"
+#import "../../Shared/ObjC/HCMTrack.h"
+#import "../../Shared/ObjC/HCMPoint.h"
 
 #endif

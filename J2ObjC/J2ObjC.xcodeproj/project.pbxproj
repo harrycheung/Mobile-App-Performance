@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A67487D1ABBC1BB007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A67487C1ABBC1BB007626E0 /* Data */; };
 		4A9874441A91525C007B8FB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874431A91525C007B8FB8 /* main.m */; };
 		4A9874471A91525C007B8FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874461A91525C007B8FB8 /* AppDelegate.m */; };
 		4A98744A1A91525C007B8FB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9874491A91525C007B8FB8 /* ViewController.m */; };
@@ -25,7 +26,6 @@
 		4A9874851A91631A007B8FB8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9874841A91631A007B8FB8 /* libz.dylib */; };
 		4A9874871A91631E007B8FB8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9874861A91631E007B8FB8 /* Security.framework */; };
 		4A9874891A916325007B8FB8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9874881A916325007B8FB8 /* libicucore.dylib */; };
-		4A98748D1A9163E0007B8FB8 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A98748C1A9163E0007B8FB8 /* Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A67487C1ABBC1BB007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
 		4A98743E1A91525C007B8FB8 /* J2ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J2ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9874421A91525C007B8FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A9874431A91525C007B8FB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		4A9874841A91631A007B8FB8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4A9874861A91631E007B8FB8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4A9874881A916325007B8FB8 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		4A98748C1A9163E0007B8FB8 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 		4A9874351A91525C007B8FB8 = {
 			isa = PBXGroup;
 			children = (
-				4A98748C1A9163E0007B8FB8 /* Assets */,
+				4A67487C1ABBC1BB007626E0 /* Data */,
 				4A9874881A916325007B8FB8 /* libicucore.dylib */,
 				4A9874861A91631E007B8FB8 /* Security.framework */,
 				4A9874841A91631A007B8FB8 /* libz.dylib */,
@@ -255,8 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A98744D1A91525C007B8FB8 /* Main.storyboard in Resources */,
-				4A98748D1A9163E0007B8FB8 /* Assets in Resources */,
 				4A9874521A91525C007B8FB8 /* LaunchScreen.xib in Resources */,
+				4A67487D1ABBC1BB007626E0 /* Data in Resources */,
 				4A98744F1A91525C007B8FB8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

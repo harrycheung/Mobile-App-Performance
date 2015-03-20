@@ -9,14 +9,14 @@ TST_DIR := Java/src/test/java
 TEST_BIN := j2objcTest
 CLASSPATH := $(J2OBJC_HOME)/lib/j2objc_guava.jar:$(J2OBJC_HOME)/lib/j2objc_annotations.jar:$(J2OBJC_HOME)/lib/junit-4.10.jar:Java/lib/json-20090211.jar
 PREFIX := HCM
-SRC_FILES := $(subst $(SRC_DIR)/, , $(shell find "$(SRC_DIR)" -name '*.java' -type f))
+SRC_FILES := $(subst $(SRC_DIR)/, , $(shell find -L "$(SRC_DIR)" -name '*.java' -type f))
 SRC_FOLDERS := $(sort $(dir $(addprefix $(SRC_DIR)/, $(SRC_FILES))))
-TST_FILES := $(subst $(TST_DIR)/, , $(shell find "$(TST_DIR)" -name '*Test.java' -type f))
+TST_FILES := $(subst $(TST_DIR)/, , $(shell find -L "$(TST_DIR)" -name '*Test.java' -type f))
 TST_FOLDERS := $(sort $(dir $(addprefix $(TST_DIR)/, $(TST_FILES))))
 TESTS := $(subst .java,,$(notdir $(TST_FILES)))
 DERIVED_FILES_DIR := j2objc_generated
 BUILD_DIR := $(DERIVED_FILES_DIR)
-J2OBJC_FLAGS := --no-package-directories -d $(BUILD_DIR) -sourcepath $(SRC_DIR):$(TST_DIR) -classpath $(CLASSPATH) --prefix harrycheung.map=HCM
+J2OBJC_FLAGS := --no-package-directories -d $(BUILD_DIR) -sourcepath $(SRC_DIR):$(TST_DIR) -classpath $(CLASSPATH) --prefix harrycheung.map.shared=HCM
 OBJC_FILES := $(addprefix $(BUILD_DIR)/, $(notdir $(SRC_FILES:.java=.m))) $(addprefix $(BUILD_DIR)/, $(notdir $(TST_FILES:.java=.m)))
 
 vpath %.java $(SRC_FOLDERS)

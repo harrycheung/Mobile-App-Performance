@@ -33,7 +33,7 @@
   NSError *error = nil;
   NSString *lapsFilePath = [[NSBundle mainBundle] pathForResource:@"multi_lap_session"
                                                            ofType:@"csv"
-                                                      inDirectory:@"Assets"];
+                                                      inDirectory:@"Data"];
   NSString *contents = [NSString stringWithContentsOfFile:lapsFilePath
                                                  encoding:NSUTF8StringEncoding
                                                     error:&error];

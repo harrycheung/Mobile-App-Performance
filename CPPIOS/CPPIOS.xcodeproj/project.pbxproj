@@ -14,11 +14,11 @@
 		4A37946D1ABA36870084F830 /* HCMSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A37945F1ABA36870084F830 /* HCMSession.cpp */; };
 		4A37946E1ABA36870084F830 /* HCMSessionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A3794601ABA36870084F830 /* HCMSessionManager.cpp */; };
 		4A37946F1ABA36870084F830 /* HCMTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A3794611ABA36870084F830 /* HCMTrack.cpp */; };
-		4A3794711ABA464F0084F830 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3794701ABA464F0084F830 /* Assets */; };
 		4A3794771ABA468A0084F830 /* GateTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A3794721ABA468A0084F830 /* GateTests.mm */; };
 		4A3794781ABA468A0084F830 /* PhysicsTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A3794731ABA468A0084F830 /* PhysicsTests.mm */; };
 		4A3794791ABA468A0084F830 /* PointTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A3794741ABA468A0084F830 /* PointTests.mm */; };
 		4A37947A1ABA468A0084F830 /* SessionTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A3794751ABA468A0084F830 /* SessionTests.mm */; };
+		4A6748831ABBC881007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A6748821ABBC881007626E0 /* Data */; };
 		4AB5CFC71AB9C2ED0024F691 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5CFC61AB9C2ED0024F691 /* main.m */; };
 		4AB5CFCA1AB9C2ED0024F691 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5CFC91AB9C2ED0024F691 /* AppDelegate.m */; };
 		4AB5CFCD1AB9C2ED0024F691 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5CFCC1AB9C2ED0024F691 /* ViewController.mm */; };
@@ -61,11 +61,11 @@
 		4A3794661ABA36870084F830 /* HCMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMSession.h; path = ../Shared/CPP/HCMSession.h; sourceTree = "<group>"; };
 		4A3794671ABA36870084F830 /* HCMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMSessionManager.h; path = ../Shared/CPP/HCMSessionManager.h; sourceTree = "<group>"; };
 		4A3794681ABA36870084F830 /* HCMTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCMTrack.h; path = ../Shared/CPP/HCMTrack.h; sourceTree = "<group>"; };
-		4A3794701ABA464F0084F830 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		4A3794721ABA468A0084F830 /* GateTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GateTests.mm; sourceTree = "<group>"; };
 		4A3794731ABA468A0084F830 /* PhysicsTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsTests.mm; sourceTree = "<group>"; };
 		4A3794741ABA468A0084F830 /* PointTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PointTests.mm; sourceTree = "<group>"; };
 		4A3794751ABA468A0084F830 /* SessionTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SessionTests.mm; sourceTree = "<group>"; };
+		4A6748821ABBC881007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
 		4AB5CFC11AB9C2ED0024F691 /* CPPIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPPIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB5CFC51AB9C2ED0024F691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB5CFC61AB9C2ED0024F691 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		4AB5CFB81AB9C2ED0024F691 = {
 			isa = PBXGroup;
 			children = (
-				4A3794701ABA464F0084F830 /* Assets */,
+				4A6748821ABBC881007626E0 /* Data */,
 				4A37945B1ABA36870084F830 /* HCMGate.cpp */,
 				4A37945C1ABA36870084F830 /* HCMLap.cpp */,
 				4A37945D1ABA36870084F830 /* HCMPhysics.cpp */,
@@ -261,8 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB5CFD01AB9C2ED0024F691 /* Main.storyboard in Resources */,
-				4A3794711ABA464F0084F830 /* Assets in Resources */,
 				4AB5CFD51AB9C2ED0024F691 /* LaunchScreen.xib in Resources */,
+				4A6748831ABBC881007626E0 /* Data in Resources */,
 				4AB5CFD21AB9C2ED0024F691 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

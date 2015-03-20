@@ -11,7 +11,7 @@ import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.foundation.NSBundle;
 import org.robovm.apple.uikit.*;
 
-import harrycheung.map.*;
+import harrycheung.map.shared.*;
 
 public class MainViewController extends UIViewController {
 

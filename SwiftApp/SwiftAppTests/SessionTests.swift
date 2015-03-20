@@ -47,7 +47,7 @@ class SessionTests: XCTestCase {
   }
   
   func testSingleLapSession() {
-    let lapsFilePath = NSBundle.mainBundle().pathForResource("single_lap_session", ofType: "csv", inDirectory: "Assets")!
+    let lapsFilePath = NSBundle.mainBundle().pathForResource("single_lap_session", ofType: "csv", inDirectory: "Data")!
     let contents = String(contentsOfFile: lapsFilePath, encoding: NSUTF8StringEncoding, error: nil)!
     let lines = contents.componentsSeparatedByString("\n")
     
@@ -84,7 +84,7 @@ class SessionTests: XCTestCase {
   }
   
   func testMultiLapSession() {
-    let lapsFilePath = NSBundle.mainBundle().pathForResource("multi_lap_session", ofType: "csv", inDirectory: "Assets")!
+    let lapsFilePath = NSBundle.mainBundle().pathForResource("multi_lap_session", ofType: "csv", inDirectory: "Data")!
     let contents = String(contentsOfFile: lapsFilePath, encoding: NSUTF8StringEncoding, error: nil)!
     let lines = contents.componentsSeparatedByString("\n")
     

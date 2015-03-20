@@ -33,8 +33,7 @@
 		4A3526C81A8D44C900CC8A6B /* PhysicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3526C71A8D44C900CC8A6B /* PhysicsTests.swift */; };
 		4A3526CA1A8D450B00CC8A6B /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3526C91A8D450B00CC8A6B /* Physics.swift */; };
 		4A3526CB1A8D5AD000CC8A6B /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3526C91A8D450B00CC8A6B /* Physics.swift */; };
-		4A3526CD1A8D5C2C00CC8A6B /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3526CC1A8D5C2C00CC8A6B /* Assets */; };
-		4A3526CE1A8D5C3A00CC8A6B /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3526CC1A8D5C2C00CC8A6B /* Assets */; };
+		4A6748811ABBC838007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A6748801ABBC838007626E0 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,7 @@
 		4A3526B91A8D446C00CC8A6B /* GateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GateTests.swift; sourceTree = "<group>"; };
 		4A3526C71A8D44C900CC8A6B /* PhysicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsTests.swift; sourceTree = "<group>"; };
 		4A3526C91A8D450B00CC8A6B /* Physics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Physics.swift; sourceTree = "<group>"; };
-		4A3526CC1A8D5C2C00CC8A6B /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		4A6748801ABBC838007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +93,7 @@
 		4A35267A1A8D443900CC8A6B = {
 			isa = PBXGroup;
 			children = (
-				4A3526CC1A8D5C2C00CC8A6B /* Assets */,
+				4A6748801ABBC838007626E0 /* Data */,
 				4A3526851A8D443900CC8A6B /* SwiftApp */,
 				4A35269B1A8D443900CC8A6B /* SwiftAppTests */,
 				4A3526841A8D443900CC8A6B /* Products */,
@@ -242,8 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A35268E1A8D443900CC8A6B /* Main.storyboard in Resources */,
-				4A3526CD1A8D5C2C00CC8A6B /* Assets in Resources */,
 				4A3526931A8D443900CC8A6B /* LaunchScreen.xib in Resources */,
+				4A6748811ABBC838007626E0 /* Data in Resources */,
 				4A3526901A8D443900CC8A6B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3526CE1A8D5C3A00CC8A6B /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
