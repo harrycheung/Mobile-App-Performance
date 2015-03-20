@@ -91,13 +91,9 @@ public class Point {
     double θ = atan2(y, x);
 
     if (inRadians) {
-      double A = (θ + 2 * PI);
-      double B = PI;
-      return roundValue(A - B * (A/B));
+      return roundValue((θ + 2 * PI) % PI);
     } else {
-      double A = (toDegrees(θ) + 2 * 360);
-      double B = 360;
-      return roundValue(A - B * (A/B));
+      return roundValue((toDegrees(θ) + 2 * 360) % 360);
     }
   }
 
@@ -112,9 +108,7 @@ public class Point {
     double λ1 = longitude;
     double φ2 = asin(sin(φ1) * cos(δ) + cos(φ1) * sin(δ) * cos(θ));
     double λ2 = λ1 + atan2(sin(θ) * sin(δ) * cos(φ1), cos(δ) - sin(φ1) * sin(φ2));
-    double A = (λ2 + 3.0 * PI);
-    double B = (2.0 * PI);
-    λ2 = A - B * (A/B) - PI; // normalise to -180..+180
+    λ2 = (λ2 + 3.0 * PI) % (2.0 * PI) - PI; // normalise to -180..+180
 
     return new Point(φ2, λ2, true);
   }
