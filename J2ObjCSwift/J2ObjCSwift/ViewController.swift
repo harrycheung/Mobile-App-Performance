@@ -80,18 +80,20 @@ class ViewController: UIViewController {
     let start = NSDate().timeIntervalSince1970
     var startTime = start
     for index in 1...count {
-      HCMSessionManager.getInstance().startSessionWithHCMTrack(track!)
-      for point in points {
-        HCMSessionManager.getInstance().gpsWithDouble(point.getLatitudeDegrees(),
-          withDouble: point.getLongitudeDegrees(),
-          withDouble: point.getSpeed(),
-          withDouble: point.getBearing(),
-          withDouble: point.getHorizontalAccuracy(),
-          withDouble: point.getVerticalAccuracy(),
-          withDouble: startTime)
-        startTime += 1
+      autoreleasepool {
+        HCMSessionManager.getInstance().startSessionWithHCMTrack(track!)
+        for point in points {
+          HCMSessionManager.getInstance().gpsWithDouble(point.getLatitudeDegrees(),
+            withDouble: point.getLongitudeDegrees(),
+            withDouble: point.getSpeed(),
+            withDouble: point.getBearing(),
+            withDouble: point.getHorizontalAccuracy(),
+            withDouble: point.getVerticalAccuracy(),
+            withDouble: startTime)
+          startTime += 1
+        }
+        HCMSessionManager.getInstance().endSession()
       }
-      HCMSessionManager.getInstance().endSession()
     }
     return NSDate().timeIntervalSince1970 - start
   }
