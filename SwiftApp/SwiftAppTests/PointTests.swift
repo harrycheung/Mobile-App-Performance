@@ -52,10 +52,10 @@ class PointTests: XCTestCase {
     let b = Point(latitude: 15, longitude: 15)
     let c = Point(latitude: 5, longitude: 15)
     let d = Point(latitude: 15, longitude: 5)
+    var intersection = Point()
+    Point.intersectSimple(p: a, p2: b, q: c, q2: d, intersection: &intersection)
     
-    var i = Point.intersectSimple(p: a, p2: b, q: c, q2: d)
-    
-    XCTAssertEqual(i!, Point(latitude: 10, longitude: 10))
+    XCTAssertEqual(intersection, Point(latitude: 10, longitude: 10))
   }
   
 }

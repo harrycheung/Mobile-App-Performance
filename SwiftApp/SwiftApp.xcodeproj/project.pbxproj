@@ -33,8 +33,7 @@
 		4A3526C81A8D44C900CC8A6B /* PhysicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3526C71A8D44C900CC8A6B /* PhysicsTests.swift */; };
 		4A3526CA1A8D450B00CC8A6B /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3526C91A8D450B00CC8A6B /* Physics.swift */; };
 		4A3526CB1A8D5AD000CC8A6B /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3526C91A8D450B00CC8A6B /* Physics.swift */; };
-		4A3526CD1A8D5C2C00CC8A6B /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3526CC1A8D5C2C00CC8A6B /* Assets */; };
-		4A3526CE1A8D5C3A00CC8A6B /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3526CC1A8D5C2C00CC8A6B /* Assets */; };
+		4A6748811ABBC838007626E0 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 4A6748801ABBC838007626E0 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,7 @@
 		4A3526B91A8D446C00CC8A6B /* GateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GateTests.swift; sourceTree = "<group>"; };
 		4A3526C71A8D44C900CC8A6B /* PhysicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsTests.swift; sourceTree = "<group>"; };
 		4A3526C91A8D450B00CC8A6B /* Physics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Physics.swift; sourceTree = "<group>"; };
-		4A3526CC1A8D5C2C00CC8A6B /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		4A6748801ABBC838007626E0 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../Shared/Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +93,7 @@
 		4A35267A1A8D443900CC8A6B = {
 			isa = PBXGroup;
 			children = (
-				4A3526CC1A8D5C2C00CC8A6B /* Assets */,
+				4A6748801ABBC838007626E0 /* Data */,
 				4A3526851A8D443900CC8A6B /* SwiftApp */,
 				4A35269B1A8D443900CC8A6B /* SwiftAppTests */,
 				4A3526841A8D443900CC8A6B /* Products */,
@@ -209,6 +208,7 @@
 				TargetAttributes = {
 					4A3526821A8D443900CC8A6B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 7M4B2MXG5A;
 					};
 					4A3526971A8D443900CC8A6B = {
 						CreatedOnToolsVersion = 6.3;
@@ -241,8 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A35268E1A8D443900CC8A6B /* Main.storyboard in Resources */,
-				4A3526CD1A8D5C2C00CC8A6B /* Assets in Resources */,
 				4A3526931A8D443900CC8A6B /* LaunchScreen.xib in Resources */,
+				4A6748811ABBC838007626E0 /* Data in Resources */,
 				4A3526901A8D443900CC8A6B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3526CE1A8D5C3A00CC8A6B /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -407,29 +406,39 @@
 		4A3526A31A8D443900CC8A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwiftApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
 		4A3526A41A8D443900CC8A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = SwiftApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
 		4A3526A61A8D443900CC8A6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -443,12 +452,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftApp.app/SwiftApp";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
 		4A3526A71A8D443900CC8A6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -458,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftApp.app/SwiftApp";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

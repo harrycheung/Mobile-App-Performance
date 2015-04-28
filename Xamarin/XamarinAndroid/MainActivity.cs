@@ -11,6 +11,7 @@ using Android.Widget;
 using Android.OS;
 
 using Xamarin.Shared;
+using System.Diagnostics;
 
 namespace XamarinAndroid
 {
@@ -86,39 +87,47 @@ namespace XamarinAndroid
 			label10000 = FindViewById<TextView>(Resource.Id.label10000);
 
 			button1000.Click += delegate {
-				TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-				int start = (int)t.TotalSeconds;
-				for (int i = 0; i < 1000; i++) {
-					t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-					int startTime = (int)t.TotalSeconds;
-					SessionManager.Instance().Start(track);
-					foreach(Point point in points) {
-						SessionManager.Instance().GPS(point.LatitudeDegrees(), longitude: point.LongitudeDegrees(), speed: point.speed, 
-							bearing: point.bearing, horizontalAccuracy: point.hAccuracy, verticalAccuracy: point.vAccuracy, timestamp: startTime);
-						startTime += 1;
-					}
-					SessionManager.Instance().End();
-				}
-				t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-				label1000.Text = "" + Math.Round(t.TotalSeconds - start, 3);
+        double timestamp = (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
+        Stopwatch stopWatch = new Stopwatch();
+        stopWatch.Start();
+        for (int i = 0; i < 1000; i++) {
+          SessionManager.Instance().Start(track);
+          foreach(Point point in points) {
+            SessionManager.Instance().GPS(point.LatitudeDegrees(), 
+              longitude: point.LongitudeDegrees(), 
+              speed: point.speed, 
+              bearing: point.bearing, 
+              horizontalAccuracy: point.hAccuracy, 
+              verticalAccuracy: point.vAccuracy, 
+              timestamp: timestamp);
+            timestamp++;
+          }
+          SessionManager.Instance().End();
+        }
+        stopWatch.Stop();
+        label1000.Text = String.Format("{0:0.000}", stopWatch.Elapsed.TotalSeconds);
 			};
 
-			button10000.Click += delegate {
-				TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-				int start = (int)t.TotalSeconds;
-				for (int i = 0; i < 10000; i++) {
-					t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-					int startTime = (int)t.TotalSeconds;
-					SessionManager.Instance().Start(track);
-					foreach(Point point in points) {
-						SessionManager.Instance().GPS(point.LatitudeDegrees(), longitude: point.LongitudeDegrees(), speed: point.speed, 
-							bearing: point.bearing, horizontalAccuracy: point.hAccuracy, verticalAccuracy: point.vAccuracy, timestamp: startTime);
-						startTime += 1;
-					}
-					SessionManager.Instance().End();
-				}
-				t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-				label10000.Text = "" + Math.Round(t.TotalSeconds - start, 3);
+      button10000.Click += delegate {
+        double timestamp = (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
+        Stopwatch stopWatch = new Stopwatch();
+        stopWatch.Start();
+        for (int i = 0; i < 10000; i++) {
+          SessionManager.Instance().Start(track);
+          foreach(Point point in points) {
+            SessionManager.Instance().GPS(point.LatitudeDegrees(), 
+              longitude: point.LongitudeDegrees(), 
+              speed: point.speed, 
+              bearing: point.bearing, 
+              horizontalAccuracy: point.hAccuracy, 
+              verticalAccuracy: point.vAccuracy, 
+              timestamp: timestamp);
+            timestamp++;
+          }
+          SessionManager.Instance().End();
+        }
+        stopWatch.Stop();
+        label10000.Text = String.Format("{0:0.000}", stopWatch.Elapsed.TotalSeconds);
 			};
 		}
 	}

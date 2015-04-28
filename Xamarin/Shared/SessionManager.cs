@@ -96,25 +96,25 @@ namespace Xamarin.Shared
 						currentSplit++;
 						break;
 					}
-	        if (bestLap != null && bestIndex < bestLap.points.Count - 1) {
-	          while(bestIndex < bestLap.points.Count - 1) {
-	            Point refPoint = bestLap.points[bestIndex + 1];
-	            if (refPoint.lapDistance > currentLap.distance) {
-	              break;
-	            }
-	            bestIndex++;
-	          }
-	          Point lastRefPoint = bestLap.points[bestIndex];
-	          double distanceToLastRefPoint = currentLap.distance - lastRefPoint.lapDistance;
-	          if (distanceToLastRefPoint > 0) {
-	            double sinceLastRefPoint = distanceToLastRefPoint / point.speed;
-	            gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
-	            splitGaps[currentSplit] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
-	          }
-	        }
 					splitStartTime = cross.timestamp;
 					nextGate = track.gates[currentSplit];
 				}
+        if (bestLap != null && bestIndex < bestLap.points.Count) {
+          while(bestIndex < bestLap.points.Count) {
+            var refPoint = bestLap.points[bestIndex];
+            if (refPoint.lapDistance > currentLap.distance) {
+              var lastRefPoint = bestLap.points[bestIndex - 1];
+              var distanceToLastRefPoint = currentLap.distance - lastRefPoint.lapDistance;
+              if (distanceToLastRefPoint > 0) {
+                var sinceLastRefPoint = distanceToLastRefPoint / point.speed;
+                gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
+                splitGaps[currentSplit] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
+              }
+              break;
+            }
+            bestIndex++;
+          }
+        }
 				point.lapDistance = lastPoint.lapDistance + lastPoint.Distance(point);
 				point.SetLapTime(currentLap.startTime, splitStartTime);
 			}

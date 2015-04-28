@@ -30,7 +30,7 @@
   [super viewDidLoad];
   
   NSError *error = nil;
-  NSString *lapsFilePath = [[NSBundle mainBundle] pathForResource:@"multi_lap_session" ofType:@"csv" inDirectory:@"Assets"];
+  NSString *lapsFilePath = [[NSBundle mainBundle] pathForResource:@"multi_lap_session" ofType:@"csv" inDirectory:@"Data"];
   NSString *contents = [NSString stringWithContentsOfFile:lapsFilePath encoding:NSUTF8StringEncoding error:&error];
   NSArray *lines = [contents componentsSeparatedByString:@"\n"];
   points = [[[NSMutableArray alloc] initWithCapacity:[lines count]] retain];

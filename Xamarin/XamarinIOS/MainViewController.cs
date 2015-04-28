@@ -3,8 +3,8 @@
 //
 
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UIKit;
 
 using Xamarin.Shared;
@@ -78,21 +78,26 @@ namespace XamarinIOS
 		}
 
 		private string run(int n)
-		{
-			TimeSpan t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-			int start = (int)t.TotalSeconds;
-			int startTime = start;
-			for (int i = 0; i < n; i++) {
-				t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-				SessionManager.Instance().Start(track);
-				foreach(Point point in points) {
-					SessionManager.Instance().GPS(point.LatitudeDegrees(), longitude: point.LongitudeDegrees(), speed: point.speed, bearing: point.bearing, horizontalAccuracy: point.hAccuracy, verticalAccuracy: point.vAccuracy, timestamp: startTime);
-					startTime += 1;
-				}
-				SessionManager.Instance().End();
-			}
-			t = DateTime.UtcNow - new DateTime(1970, 1, 1);
-			return "" + Math.Round(t.TotalSeconds - start, 3);
+    {
+      double timestamp = (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
+      Stopwatch stopWatch = new Stopwatch();
+      stopWatch.Start();
+      for (int i = 0; i < n; i++) {
+        SessionManager.Instance().Start(track);
+        foreach(Point point in points) {
+          SessionManager.Instance().GPS(point.LatitudeDegrees(), 
+            longitude: point.LongitudeDegrees(), 
+            speed: point.speed, 
+            bearing: point.bearing, 
+            horizontalAccuracy: point.hAccuracy, 
+            verticalAccuracy: point.vAccuracy, 
+            timestamp: timestamp);
+          timestamp++;
+        }
+        SessionManager.Instance().End();
+      }
+      stopWatch.Stop();
+      return String.Format("{0:0.000}", stopWatch.Elapsed.TotalSeconds);
 		}
 	}
 }

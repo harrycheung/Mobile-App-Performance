@@ -12,7 +12,7 @@ if (typeof require !== 'undefined') {
 var LINE_WIDTH = 80;
 var BEARING_RANGE = 90;
 
-function Gate(type, splitNumber, latitude, longitude, bearing) {
+function Gate(type, splitNumber, latitude, longitude, bearing) {  
   this.type = type;
   this.splitNumber = splitNumber;
   Point.call(this, latitude, longitude, false);

@@ -16,7 +16,8 @@ func == (left: Point, right: Point) -> Bool {
   return (left.latitudeDegrees() == right.latitudeDegrees()) && (left.longitudeDegrees() == right.longitudeDegrees())
 }
 
-class Point: NSObject, Equatable, Printable {
+
+struct Point: Equatable {
   
   let RADIUS: Double = 6371000
   
@@ -32,6 +33,10 @@ class Point: NSObject, Equatable, Printable {
   var splitTime: Double
   var acceleration: Double
   var generated: Bool = false
+  
+  init() {
+    self.init(latitude: 0, longitude: 0, inRadians: false)
+  }
   
   init (latitude: Double, longitude: Double, inRadians: Bool) {
     if inRadians {
@@ -52,16 +57,16 @@ class Point: NSObject, Equatable, Printable {
     self.acceleration = 0
   }
   
-  convenience init (latitude: Double, longitude: Double) {
+   init (latitude: Double, longitude: Double) {
     self.init(latitude: latitude, longitude: longitude, inRadians: false)
   }
   
-  convenience init (latitude: Double, longitude: Double, bearing: Double) {
+   init (latitude: Double, longitude: Double, bearing: Double) {
     self.init(latitude: latitude, longitude: longitude, inRadians: false)
     self.bearing = bearing
   }
   
-  convenience init (latitude: Double, longitude: Double, speed: Double, bearing: Double,
+   init (latitude: Double, longitude: Double, speed: Double, bearing: Double,
     horizontalAccuracy: Double, verticalAccuracy: Double, timestamp: Double) {
       self.init(latitude: latitude, longitude: longitude, inRadians: false)
       self.speed     = speed
@@ -71,7 +76,7 @@ class Point: NSObject, Equatable, Printable {
       self.timestamp = timestamp
   }
   
-  func setLapTime(startTime: Double, splitStartTime: Double) {
+  mutating func setLapTime(startTime: Double, splitStartTime: Double) {
     lapTime = timestamp - startTime
     splitTime = timestamp - splitStartTime
   }
@@ -137,23 +142,25 @@ class Point: NSObject, Equatable, Printable {
     return RADIUS * 2 * atan2(sqrt(a), sqrt(1 - a))
   }
   
-  class func intersectSimple(#p: Point, p2: Point, q: Point, q2: Point) -> Point? {
+  static func intersectSimple(#p: Point, p2: Point, q: Point, q2: Point, inout intersection: Point) -> Bool {
     let s1_x = p2.longitude - p.longitude
     let s1_y = p2.latitude - p.latitude
     let s2_x = q2.longitude - q.longitude
     let s2_y = q2.latitude - q.latitude
     
     let den = (-s2_x * s1_y + s1_x * s2_y)
-    if den == 0 { return nil }
+    if den == 0 { return false }
     
     let s = (-s1_y * (p.longitude - q.longitude) + s1_x * (p.latitude - q.latitude)) / den
     let t = ( s2_x * (p.latitude - q.latitude) - s2_y * (p.longitude - q.longitude)) / den
     
     if s >= 0 && s <= 1 && t >= 0 && t <= 1 {
-      return Point(latitude: p.latitude + (t * s1_y), longitude: p.longitude + (t * s1_x), inRadians: true)
+      intersection.latitude = p.latitude + (t * s1_y)
+      intersection.longitude = p.longitude + (t * s1_x)
+      return true
     }
     
-    return nil
+    return false
   }
   
 }

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
       + "{"
       +   "\"track\": {"
       +     "\"id\": \"1000\","
-      +     "\"name\": \"Isabella Raceway\","
+      +     "\"name\": \"Test Raceway\","
       +     "\"gates\": ["
       +       "{"
       +       "\"type\": \"SPLIT\","
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     track = Track(jsonData: trackJSON.dataUsingEncoding(NSUTF8StringEncoding)!)
     
-    let lapsFilePath = NSBundle.mainBundle().pathForResource("multi_lap_session", ofType: "csv", inDirectory: "Assets")!
+    let lapsFilePath = NSBundle.mainBundle().pathForResource("multi_lap_session", ofType: "csv", inDirectory: "Data")!
     let contents = String(contentsOfFile: lapsFilePath, encoding: NSUTF8StringEncoding, error: nil)!
     let lines = contents.componentsSeparatedByString("\n")
     for line in lines {
