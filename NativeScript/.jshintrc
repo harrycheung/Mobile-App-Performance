@@ -1,0 +1,16 @@
+{
+  "undef": false,
+  "nonew": false,
+  "curly": false,
+  "noarg": false,
+  "forin": false,
+  "noempty": false,
+  "eqeqeq": false,
+  "strict": false,
+  "bitwise": false,
+  "newcap": false,
+  "camelcase": false,
+  "browser": false,
+  "node": false,
+  "predef": [ "android", "java", "javax" ]
+}

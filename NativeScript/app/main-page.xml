@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <StackLayout>
+
+    <Button text="Run 1000" tap="{{ run1000 }}" />
+    <Label text="{{ message1000 }}" cssClass="message" textWrap="true"/>
+    <Button text="Run 10000" tap="{{ run10000}}" />
+    <Label text="{{ message10000}}" cssClass="message" textWrap="true" />
+  </StackLayout>
+</Page>

@@ -1,0 +1,33 @@
+<!-- Copyright (c) 2015 Harry Cheung -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>harrycheung.map Tests</title>
+</head>
+<body>
+  <script src="point.js"></script>
+  <script src="gate.js"></script>
+  <script src="physics.js"></script>
+  <script src="track.js"></script>
+  <script src="lap.js"></script>
+  <script src="session.js"></script>
+  <script src="session_manager.js"></script>
+  <script src="data/multi.js"></script>
+  <script src="run.js"></script>
+  <script>
+  function run1000() {
+    document.getElementById("label1000").innerHTML = "" + run(1000);
+  }
+
+  function run10000() {
+    document.getElementById("label10000").innerHTML = "" + run(10000);
+  }
+  </script>
+  <button onclick="run1000()">Run 1000</button><br><br>
+  <span id="label1000"></span><br><br>
+  <button onclick="run10000()">Run 10000</button><br><br>
+  <span id="label10000"></span>
+</body>
+</html>
