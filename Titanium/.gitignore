@@ -1,10 +1,3 @@
-.DS_Store
-Resources
-build.log
+Resources/app-file.js
+Resources/app-line.js
 build
-npm-debug.log
-tmp
-.map
-.project
-.settings
-Thumbs.db

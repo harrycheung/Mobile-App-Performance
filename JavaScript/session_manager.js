@@ -1,3 +1,5 @@
+'use strict';
+
 //
 // Copyright (c) 2015 Harry Cheung
 //
@@ -8,17 +10,17 @@ if (typeof require !== 'undefined') {
   var Session = require('session');
 }
 
-function SessionManager() { }
+function SessionManager() {}
 
 SessionManager.instance_ = null;
-SessionManager.instance = function() {
+SessionManager.instance = function () {
   if (SessionManager.instance_ == null) {
     SessionManager.instance_ = new SessionManager();
   }
   return SessionManager.instance_;
 };
 
-SessionManager.prototype.startSession = function(track) {
+SessionManager.prototype.startSession = function (track) {
   if (this.session == null) {
     this.track = track;
     this.session = new Session(this.track);
@@ -26,10 +28,14 @@ SessionManager.prototype.startSession = function(track) {
     this.session.laps.push(this.currentLap);
     var size = track.numSplits();
     this.splits = [];
-    while(size--) this.splits.push(0);
+    while (size--) {
+      this.splits.push(0);
+    }
     size = track.numSplits();
     this.splitGaps = [];
-    while(size--) this.splitGaps.push(-1);
+    while (size--) {
+      this.splitGaps.push(-1);
+    }
     this.splitStartTime = this.session.startTime;
     this.splitNumber = 0;
     this.currentSplit = 0;
@@ -40,13 +46,13 @@ SessionManager.prototype.startSession = function(track) {
   }
 };
 
-SessionManager.prototype.endSession = function() {
+SessionManager.prototype.endSession = function () {
   this.session = null;
   this.currentLap = null;
   this.bestLap = null;
 };
 
-SessionManager.prototype.gps = function(latitude, longitude, speed, bearing, 
+SessionManager.prototype.gps = function (latitude, longitude, speed, bearing,
   horizontalAccuracy, verticalAccuracy, timestamp) {
   var point = new Point(latitude, longitude, false, speed, bearing, horizontalAccuracy,
     verticalAccuracy, timestamp);
@@ -56,15 +62,16 @@ SessionManager.prototype.gps = function(latitude, longitude, speed, bearing,
       this.currentLap.add(cross);
       this.currentLap.splits[this.currentSplit] = cross.splitTime;
       switch (this.nextGate.type) {
-        case GateType.START_FINISH:
-        case GateType.FINISH:
+        case 'START_FINISH':
+        case 'FINISH':
           if (this.currentLap.points[0].generated) {
             this.currentLap.valid = true;
             if (this.bestLap == null || this.currentLap.duration < this.bestLap.duration) {
               this.bestLap = this.currentLap;
             }
           }
-        case GateType.START:
+          break;
+        case 'START':
           this.lapNumber++;
           this.currentLap = new Lap(this.session, this.track, cross.timestamp, this.lapNumber);
           this.lastPoint = new Point(
@@ -83,11 +90,13 @@ SessionManager.prototype.gps = function(latitude, longitude, speed, bearing,
           this.session.laps.push(this.currentLap);
           this.gap = 0;
           var size = this.splitGaps.length;
-          while(size--) this.splitGaps[size - 1] = 0;
+          while (size--) {
+            this.splitGaps[size - 1] = 0;
+          }
           this.bestIndex = 0;
           this.currentSplit = 0;
           break;
-        case GateType.SPLIT:
+        case 'SPLIT':
           if (this.bestLap != null) {
             this.splitGaps[this.currentSplit] = this.currentLap.splits[this.currentSplit] - this.bestLap.splits[this.currentSplit];
           }
@@ -107,8 +116,8 @@ SessionManager.prototype.gps = function(latitude, longitude, speed, bearing,
             this.gap = point.lapTime - sinceLastRefPoint - lastRefPoint.lapTime;
             this.splitGaps[this.splitNumber] = point.splitTime - sinceLastRefPoint - lastRefPoint.splitTime;
           }
-          break; 
-         }
+          break;
+        }
         this.bestIndex++;
       }
     }
