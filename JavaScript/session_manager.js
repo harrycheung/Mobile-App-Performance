@@ -70,7 +70,6 @@ SessionManager.prototype.gps = function (latitude, longitude, speed, bearing,
               this.bestLap = this.currentLap;
             }
           }
-          break;
         case 'START':
           this.lapNumber++;
           this.currentLap = new Lap(this.session, this.track, cross.timestamp, this.lapNumber);
