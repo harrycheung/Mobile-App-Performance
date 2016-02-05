@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:38
+-keep class com.tns.ErrorReportActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class com.tns.NativeScriptActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:21
+-keep class com.tns.NativeScriptApplication { <init>(...); }
+
