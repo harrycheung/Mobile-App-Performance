@@ -15,11 +15,11 @@
 JNIEXPORT jlong JNICALL Java_harrycheung_map_cppandroid_HCMTrack_loadTrack
   (JNIEnv *env, jclass cls, jlongArray array, jlong start) {
     jboolean isCopy;
-    jlong *gatePtrs = env->GetLongArrayElements(array, &isCopy);
     std::vector<HCMGate*> *gates = new std::vector<HCMGate*>();
+    jlong *gatePtrs = (jlong *) env->GetPrimitiveArrayCritical(array, &isCopy);
     for (int i = 0; i < env->GetArrayLength(array); i++) {
       gates->push_back((HCMGate *)gatePtrs[i]);
     }
-    env->ReleaseLongArrayElements(array, gatePtrs, 0);
+    env->ReleasePrimitiveArrayCritical(array, gatePtrs, 0);
     return (jlong)(new HCMTrack(gates, (HCMGate *)start));
   }
