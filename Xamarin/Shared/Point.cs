@@ -6,7 +6,7 @@ using System;
 
 namespace Xamarin.Shared
 {
-	public class Point
+	public struct Point
 	{
 		private static double RADIUS = 6371000;
 
